@@ -1,27 +1,10 @@
-// Enhanced Intersection Observer
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            
-            // Add stagger effect for project cards
-            if (entry.target.classList.contains('project-card')) {
-                entry.target.style.transitionDelay = `${entry.target.dataset.index * 0.2}s`;
-            }
-        }
-    });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+// Inicializar AOS
+AOS.init({
+    duration: 1000,
+    once: true
 });
 
-// Observe elements with animations
-document.querySelectorAll('.project-card').forEach((card, index) => {
-    card.dataset.index = index;
-    observer.observe(card);
-});
-
-// Enhanced Mobile Navigation
+// Navegación Móvil Mejorada
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-links li');
@@ -30,7 +13,6 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
     
-    // Animate nav items
     navItems.forEach((item, index) => {
         if (item.style.animation) {
             item.style.animation = '';
@@ -40,7 +22,7 @@ hamburger.addEventListener('click', () => {
     });
 });
 
-// Close mobile menu when clicking outside
+// Cerrar menú móvil al hacer clic fuera
 document.addEventListener('click', (e) => {
     if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
         navLinks.classList.remove('active');
@@ -48,12 +30,12 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Enhanced Smooth Scroll with offset
+// Scroll Suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        const offset = 80; // Height of fixed header
+        const offset = 80;
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
         
         window.scrollTo({
@@ -61,19 +43,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
         
-        // Close mobile menu after clicking
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
     });
 });
 
-// Enhanced Parallax Effect for Hero Section
+// Efecto Parallax en Hero
 window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero');
     const scrolled = window.pageYOffset;
     hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
     
-    // Add scrolled class to nav
+    // Agregar clase scrolled a nav
     const nav = document.querySelector('nav');
     if (scrolled > 50) {
         nav.classList.add('scrolled');
@@ -82,7 +63,50 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Enhanced Project Cards Hover Effect with tilt
+// Animación de Números en Estadísticas
+const observerStats = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateNumbers(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number').forEach(stat => {
+    observerStats.observe(stat);
+});
+
+function animateNumbers(element) {
+    const target = parseInt(element.textContent);
+    let current = 0;
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    
+    function updateNumber() {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current) + '+';
+            requestAnimationFrame(updateNumber);
+        } else {
+            element.textContent = target + '+';
+        }
+    }
+    
+    updateNumber();
+}
+
+// Formulario de Contacto
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Aquí iría la lógica para enviar el formulario
+        alert('Mensaje enviado con éxito!');
+        contactForm.reset();
+    });
+}
+
+// Efecto Hover en Tarjetas de Proyecto
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
@@ -101,9 +125,4 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
     });
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
 });

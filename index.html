@@ -1,44 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construction Company</title>
+    <title>Empresa de Construcción</title>
+    <link rel="shortcut icon" href="./assest/isologo.png"  type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> 021 976 0180</span>
-                <span><i class="fas fa-envelope"></i> info@construction.co.za</span>
-            </div>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </div>
 
-    <!-- Navigation -->
+
+    <!-- Navegación -->
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Construction Logo">
+                <img src="./assest/logopricipalfondoblanco.png" alt="Logo Construcción">
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#team">The Team</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#affiliations">Affiliations</a></li>
-                <li><a href="#policies">Policies</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#afiliaciones">Afiliaciones</a></li>
+                <li><a href="#politicas">Políticas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -48,59 +37,199 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Sección Hero -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>HealthCare</h1>
-            <a href="#projects" class="cta-button">View Our Projects</a>
+        <div class="hero-content" data-aos="fade-up">
+            <h1> Construcción</h1>
+            <p class="hero-subtitle">Construyendo el futuro</p>
+            <a href="#proyectos" class="cta-button">Ver Nuestros Proyectos</a>
         </div>
     </section>
 
-    <!-- Services Bar -->
+    <!-- Barra de Servicios -->
     <div class="services-bar">
         <div class="container">
-            <span>COMMERCIAL</span>
+            <span>COMERCIAL</span>
             <span>•</span>
             <span>RETAIL</span>
             <span>•</span>
             <span>INDUSTRIAL</span>
             <span>•</span>
-            <span>EDUCATION</span>
+            <span>EDUCACIÓN</span>
             <span>•</span>
-            <span>HEALTHCARE</span>
+            <span>SALUD</span>
             <span>•</span>
-            <span>RESIDENTIAL</span>
+            <span>RESIDENCIAL</span>
         </div>
     </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Current Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <img src="project1.jpg" alt="Healthcare Facility">
-                <div class="project-info">
-                    <h3>Healthcare Facility</h3>
-                    <p>Modern medical center construction with state-of-the-art facilities</p>
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="about-section">
+        <div class="container">
+            <h2 data-aos="fade-up">Sobre Nosotros</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Somos líderes en la construcción</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check"></i> Certificación ISO 9001</li>
+                        <li><i class="fas fa-check"></i> Equipo altamente calificado</li>
+                        <li><i class="fas fa-check"></i> Compromiso con la calidad</li>
+                        <li><i class="fas fa-check"></i> Innovación constante</li>
+                    </ul>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="project2.jpg" alt="Medical Center">
-                <div class="project-info">
-                    <h3>Medical Center</h3>
-                    <p>Specialized medical facility with advanced equipment</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="project3.jpg" alt="Hospital Wing">
-                <div class="project-info">
-                    <h3>Hospital Wing</h3>
-                    <p>New hospital wing expansion project</p>
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-item">
+                        <span class="stat-number">300+</span>
+                        <span class="stat-text">Proyectos Completados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-text">Profesionales</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-text">Años de Experiencia</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <h2 data-aos="fade-up">Proyectos Actuales</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="fade-up">
+                <img src="project1.jpg" alt="Centro Médico">
+                <div class="project-info">
+                    <h3>Centro Médico Especializado</h3>
+                    <p>Construcción de centro médico moderno con instalaciones de última generación</p>
+                    <a href="#" class="project-link">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="project2.jpg" alt="Centro Médico">
+                <div class="project-info">
+                    <h3>Hospital General</h3>
+                    <p>Instalaciones médicas especializadas con equipamiento avanzado</p>
+                    <a href="#" class="project-link">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="project3.jpg" alt="Ala Hospitalaria">
+                <div class="project-info">
+                    <h3>Nueva Ala Hospitalaria</h3>
+                    <p>Proyecto de expansión de ala hospitalaria</p>
+                    <a href="#" class="project-link">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">Lo que dicen nuestros clientes</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Excelente trabajo y profesionalismo en todo momento. Cumplieron con los plazos y el presupuesto."</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/50" alt="Cliente">
+                            <div>
+                                <h4>Dr. Carlos Rodríguez</h4>
+                                <p>Director Médico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"La calidad de construcción y atención al detalle superó nuestras expectativas."</p>
+                        <div class="testimonial-author">
+                            <img src="https://via.placeholder.com/50" alt="Cliente">
+                            <div>
+                                <h4>Dra. Ana Martínez</h4>
+                                <p>Gerente de Operaciones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Contáctanos</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal 123, Ciudad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>021 976 0180</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@construccion.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" data-aos="fade-left">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Mensaje" required></textarea>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Empresa de Construcción</h3>
+                    <p>Construyendo el futuro.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empresa de Construcción. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
