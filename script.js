@@ -126,3 +126,53 @@ document.querySelectorAll('.project-card').forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
     });
 });
+
+
+// Agregar al final del archivo script.js existente
+
+// Funcionalidad del slider de proyectos
+document.querySelectorAll('.project-card').forEach(card => {
+    const slider = card.querySelector('.image-slider');
+    const images = card.querySelectorAll('.image-slider img');
+    const dots = card.querySelectorAll('.project-navigation button');
+    const prevBtn = card.querySelector('.prev');
+    const nextBtn = card.querySelector('.next');
+    let currentIndex = 0;
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateSlider();
+    }
+
+    // Event Listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
+
+    // Auto slide cada 5 segundos
+    let interval = setInterval(nextSlide, 5000);
+
+    // Detener auto slide cuando el mouse está sobre la tarjeta
+    card.addEventListener('mouseenter', () => clearInterval(interval));
+    card.addEventListener('mouseleave', () => {
+        interval = setInterval(nextSlide, 5000);
+    });
+});
