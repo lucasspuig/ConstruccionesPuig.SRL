@@ -19,6 +19,11 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    background-image: url('./assest/fondohero.avif'); /* Cambia la ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo al desplazarse */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .container {
@@ -101,16 +106,31 @@ nav .container {
 }
 
 /* Hero Section */
-.hero {
-    background-image: url('/assest/Captura\ de\ pantalla\ 2025-01-16\ 100441.png');
+.logo-container {
+    position: absolute; /* Coloca el logo sobre la imagen */
+    top: 70%; /* Centra verticalmente */
+    left: 47%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro del logo */
+    text-align: center; /* Asegura que el logo esté centrado dentro del contenedor */
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7)); /* Aplica sombra oscura */
+
+}
+
+.logohero img {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: 20%;
+    background-color: #05050570;
+}
+.hero .fondo{
+
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 105%;
+    height: 130vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--background-light);
+    
     
     background-size: cover;
     background-position: center;
