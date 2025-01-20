@@ -75,6 +75,7 @@ nav {
     top: 0;
     z-index: 1000;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 20px
 }
 
 nav .container {
@@ -108,24 +109,24 @@ nav .container {
 /* Hero Section */
 .logo-container {
     position: absolute; /* Coloca el logo sobre la imagen */
-    top: 70%; /* Centra verticalmente */
+    top: 60%; /* Centra verticalmente */
     left: 47%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta el punto de referencia al centro del logo */
     text-align: center; /* Asegura que el logo esté centrado dentro del contenedor */
-    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.7)); /* Aplica sombra oscura */
+    filter: drop-shadow(10px 5px 10px rgba(0, 0, 0, 0.7)); /* Aplica sombra oscura */
 
 }
 
-.logohero img {
-    width: 100px; /* Ajusta el tamaño del logo */
+.logohero  {
+    width: 80%; /* Ajusta el tamaño del logo */
     height: 20%;
-    background-color: #05050570;
+   
 }
-.hero .fondo{
+.hero {
 
     position: relative;
-    width: 105%;
-    height: 130vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +182,8 @@ nav .container {
 /* Sección Nosotros */
 .about-section {
     padding: 100px 0;
-    background: var(--gray-light);
+    color: white;
+    background: #000000bf;
 }
 
 .about-content {
@@ -216,10 +218,11 @@ nav .container {
 .stat-item {
     text-align: center;
     padding: 30px;
-    background: var(--white);
+    background-color: var(--background-light);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    color: rgb(255, 255, 255);
 }
 
 .stat-item:hover {
@@ -238,19 +241,28 @@ nav .container {
 /* Sección Proyectos Mejorada */
 .projects {
     padding: 100px 0;
-    background: var(--gray-light);
+    
 }
 
 .projects h2 {
     text-align: center;
     margin-bottom: 50px;
     font-size: 2.5rem;
+    color: white;
+    filter: drop-shadow(10px 5px 10px rgba(0, 0, 0, 0.7)); /* Aplica sombra oscura */
+    margin: 0% 31% 5% 30%;
+    border-radius: 3%;
+    font-weight: 600;
+    text-decoration: none;
+    
+  
 }
+
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    gap: 35px;
     padding: 0 20px;
 }
 
@@ -276,6 +288,7 @@ nav .container {
 .project-images img {
     width: 100%;
     height: 100%;
+    position: absolute;
     object-fit: cover;
     transition: all 0.5s ease;
 }
@@ -385,9 +398,12 @@ nav .container {
 /* Sección Testimonios */
 .testimonials {
     padding: 100px 0;
-    background: var(--white);
+    color: white;
+    
 }
-
+.container h2{
+    color: white;
+}
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -396,7 +412,7 @@ nav .container {
 }
 
 .testimonial-card {
-    background: var(--gray-light);
+    background: #df6806db;
     padding: 30px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -408,7 +424,7 @@ nav .container {
 }
 
 .testimonial-content i {
-    color: var(--primary-color);
+    color: black;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -429,7 +445,8 @@ nav .container {
 /* Sección Contacto */
 .contact {
     padding: 100px 0;
-    background: var(--gray-light);
+    background: #000000bf;
+    color: white;
 }
 
 .contact-content {
@@ -480,7 +497,7 @@ nav .container {
 
 /* Footer Mejorado */
 .footer {
-    background: var(--secondary-color);
+    background-color: var(--background-light);
     color: var(--text-color);
     padding: 70px 0 20px;
 }
