@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUIG Arquitectura & Construcción - Proyectos</title>
+    <link rel="stylesheet" href="antecedentes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>PUIG ARQUITECTURA & CONSTRUCCIÓN</h1>
+            <p class="subtitle">Portafolio de Proyectos</p>
+        </header>
+
+        <!-- Search and Filters -->
+        <div class="filters-container">
+            <div class="search-box">
+                <i class="icon-search">🔍</i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar por nombre, cliente o ubicación..."
+                >
+            </div>
+            
+            <div class="filter-selects">
+                <select id="statusFilter">
+                    <option value="all">Todos los estados</option>
+                    <option value="completed">Completados</option>
+                    <option value="in-progress">En Construcción</option>
+                </select>
+
+                <select id="typeFilter">
+                    <option value="all">Todos los tipos</option>
+                    <option value="residential">Residencial</option>
+                    <option value="commercial">Comercial</option>
+                    <option value="government">Gubernamental</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon">🏗️</div>
+            <h3>No se encontraron proyectos</h3>
+            <p>Intenta ajustar tus filtros de búsqueda</p>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <button id="prevPage" class="pagination-btn">Anterior</button>
+            <span id="pageInfo">Página 1 de 1</span>
+            <button id="nextPage" class="pagination-btn">Siguiente</button>
+        </div>
+    </div>
+
+    <script src="antecedentes.js"></script>
+</body>
+</html>

@@ -128,51 +128,78 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 
-// Agregar al final del archivo script.js existente
 
-// Funcionalidad del slider de proyectos
-document.querySelectorAll('.project-card').forEach(card => {
-    const slider = card.querySelector('.image-slider');
-    const images = card.querySelectorAll('.image-slider img');
-    const dots = card.querySelectorAll('.project-navigation button');
-    const prevBtn = card.querySelector('.prev');
-    const nextBtn = card.querySelector('.next');
-    let currentIndex = 0;
 
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentIndex);
+  // Carousel functionality
+    // Configuración del carrusel
+    document.querySelectorAll('.carousel-container').forEach(carousel => {
+        const images = carousel.querySelector('.carousel-images');
+        const imageCount = images.children.length;
+        let currentIndex = 0;
+        let intervalId;
+
+        // Crear indicadores
+        const indicators = carousel.querySelector('.carousel-indicators');
+        for (let i = 0; i < imageCount; i++) {
+        const indicator = document.createElement('button');
+        indicator.className = 'indicator' + (i === 0 ? ' active' : '');
+        indicator.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+            resetInterval();
         });
-    }
+        indicators.appendChild(indicator);
+        }
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateSlider();
-    }
+        function updateCarousel() {
+        images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Actualizar indicadores
+        carousel.querySelectorAll('.indicator').forEach((ind, i) => {
+            ind.classList.toggle('active', i === currentIndex);
+        });
+        }
 
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateSlider();
-    }
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % imageCount;
+        updateCarousel();
+        }
 
-    // Event Listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+        function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextSlide, 6000);
+        }
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            updateSlider();
+        // Iniciar carrusel automático
+        resetInterval();
+
+        // Pausar el carrusel al pasar el mouse
+        carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
+        carousel.addEventListener('mouseleave', resetInterval);
+    });
+
+    // Funcionalidad del modal (se mantiene igual)
+    const modal = document.querySelector('.modal');
+    const modalTitle = modal.querySelector('.modal-title');
+    const modalDescription = modal.querySelector('.modal-description');
+    const closeModal = modal.querySelector('.close-modal');
+
+    document.querySelectorAll('.view-details').forEach(button => {
+        button.addEventListener('click', () => {
+        const title = button.closest('.project-content').querySelector('.project-title').textContent;
+        const description = button.getAttribute('data-description');
+        
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'block';
         });
     });
 
-    // Auto slide cada 5 segundos
-    let interval = setInterval(nextSlide, 5000);
-
-    // Detener auto slide cuando el mouse está sobre la tarjeta
-    card.addEventListener('mouseenter', () => clearInterval(interval));
-    card.addEventListener('mouseleave', () => {
-        interval = setInterval(nextSlide, 5000);
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
     });
-});
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+        modal.style.display = 'none';
+        }
+    });
