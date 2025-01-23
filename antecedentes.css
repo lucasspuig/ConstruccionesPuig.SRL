@@ -1,15 +1,15 @@
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --background-color: #f3f4f6;
-    --card-background: #ffffff;
-    --text-primary: #1f2937;
-    --text-secondary: #4b5563;
-    --border-color: #e5e7eb;
+    --primary-color: #DF6706;
+    --secondary-color: #F4AF71;
+    --background-color: #364e5ddf;
+    --card-background: #364e5da8;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --border-color: #b7b7b7;
     --success-bg: #dcfce7;
     --success-text: #166534;
     --info-bg: #dbeafe;
-    --info-text: #1e40af;
+    --info-text: #37487f;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -23,9 +23,13 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-primary);
-    line-height: 1.5;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('./assest/fondohero.avif'); /* Cambia la ruta a tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo al desplazarse */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .container {
@@ -33,12 +37,16 @@ body {
     margin: 0 auto;
     padding: 2rem;
 }
-
+.logosecundario{
+    align-items: center;
+    width: 25%;
+    height: 120px;
+}
 /* Header Styles */
 .header {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 2rem 0;
+    padding: 3rem 0;
     background: var(--card-background);
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
@@ -117,6 +125,7 @@ select {
     background-color: var(--card-background);
     cursor: pointer;
     transition: all 0.3s ease;
+    color: white;
 }
 
 select:focus {
@@ -231,15 +240,17 @@ select:focus {
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
+    
 }
 
 .pagination-btn {
     padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    background: var(--card-background);
+    background: black;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: white;
 }
 
 .pagination-btn:hover:not(:disabled) {

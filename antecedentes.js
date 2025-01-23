@@ -20,6 +20,414 @@ const projects = [
         type: 'residential',
         image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
     },
+    {
+        name: 'VIVIENDAS UNIFAMILIARES OJEDA',
+        area: 90,
+        address: 'Basabilbaso 1052 - Paraná, Entre Ríos.',
+        client: 'Ojeda Emilio',
+        period: 'Octubre 2009 - Abril 2010',
+        status: 'completed',
+        type: 'residential',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR GONCEBATT - SCHMIDT',
+        area: 52,
+        address: 'Av. J. Lino Churruarin Nº 1572 - Paraná, Entre Ríos.',
+        client: 'Goncebatt Marina Soledad, Schmidt Franco Matías',
+        period: 'Mayo 2011 - Diciembre 2011.',
+        status: 'completed',
+        type: 'residential',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR HEIT - SPAHN',
+        area:  165 ,
+        address: 'Calle Pública 1538 Nº 475 - Paraná, Entre Ríos',
+        client: 'Heit Miguel Eugenio, Spahn Silvia Gisela.',
+        period: 'Agosto 2010 - Abril 2011',
+        status: 'completed',
+        type: 'residential',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR ZIRPOLI - RAMIREZ',
+        area: 120,
+        address: 'Juan Romualdo Báez Nº 1257 - Paraná, Entre Ríos',
+        client: 'Zirpoli Miguel Ángel, Ramírez Adriana Verónica',
+        period: 'Octubre 2012 - Abril 2013',
+        status: 'completed',
+        type: 'residential',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR CARBO - NESA',
+        area: 160,
+        address: 'Calle Pública 1580 Nº 2753 - Paraná, Entre Ríos',
+        client: ' Carbo Sebastián, Nesa María Celeste',
+        period: 'Junio 2012 - Enero 2014',
+        status: 'completed',
+        type: 'residential',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c'
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR GEIST',
+        area:  60,
+        address: 'Las Dalias 30 - Oro Verde, Entre Ríos',
+        client: 'Geist Matías Leonardo',
+        period: 'Noviembre 2013 - Mayo 2014',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR SOSA',
+        area: 60,
+        address: 'Calle Pública 1506 Nº 1513 - Paraná, Entre Ríos',
+        client: 'Sosa Cristian Andrés',
+        period: 'Septiembre 2012 - Marzo 2013',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR OSMAN - ACOSTA',
+        area: 60,
+        address: 'Antonio Bonell Nº 887 - Paraná, Entre Ríos',
+        client: 'Osman Nicolás Gabriel, Acosta María Salome',
+        period: 'Diciembre 2013 - Julio 2014',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR SARLI - PRIETO',
+        area: 165,
+        address: 'Av. Zanni 1100 Lote 32 - Paraná, Entre Ríos',
+        client: 'Sarli Scesa Gerardo Daniel, Prieto Antonella',
+        period: 'Abril 2013 - Diciembre 2013',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR BENÍTEZ',
+        area: 70 ,
+        address: 'Ciudad del Federal 163 - Colonia Avellaneda, Entre Ríos',
+        client: ': Benítez María Florencia, De Carlo Giovann',
+        period: ' Diciembre 2014 - Octubre 2015',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR CARABALLO',
+        area: 70,
+        address: 'Las Torcazas S/N - Colonia Avellaneda, Entre Ríos',
+        client: 'Caravallo Hugo Héctor',
+        period: 'Noviembre 2014 - Julio 2015',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR ENRIQUE',
+        area: 83,
+        address: 'Roque Saez Peña esq. Chile - San Benito, Entre Ríos',
+        client: 'Enrique Javier Fernando Antonio',
+        period: 'Agosto 2015',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR TUYARET',
+        area: 57,
+        address: 'Juan Chiriviro y Las Azaleas - Colonia Avellaneda, Entre Ríos',
+        client: 'Tuyaret Valeria',
+        period: 'Junio 2015 - Enero 2016',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR GANDOLFO',
+        area: 75,
+        address: 'Calle Pública 1610 Nº 3748 - Paraná, Entre Ríos',
+        client: 'Gandolfo German Eduardo',
+        period: 'Noviembre 2015 ',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR DIAZ VERGARA',
+        area: 70,
+        address: 'Juan Domingo Perón Nº 267 - Colonia Avellaneda, Entre Ríos',
+        client: 'Díaz Vergara Iván Josué',
+        period: ' Agosto 2015',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR DIAZ COMA ',
+        area: 50,
+        address: 'Av. Zaba Hernandez y Concordia - San Benito, Entre Ríos',
+        client: 'Comas Cancio Eliana Sofía',
+        period: 'Febrero 2016',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR CESARI',
+        area: 60,
+        address: 'Pte. Alfonsin S/N - San Benito, Entre Ríos',
+        client: 'Cesari Franco',
+        period: 'Mayo 2016',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'TRATAMIENTO DE FACHADA DE SALA DE EXPOSICIONES - COMPLEJO SOCIAL - TÚNEL SUBFLUVIAL',
+        address: 'Paraná, Entre Ríos',
+        client: 'Túnel Subfluvial',
+        period: ' Marzo 2017',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'LOCAL COMERCIAL ALMAFUERTE',
+        area: 55,
+        address: 'Almafuerte 896 - Paraná, Entre Ríos',
+        client: 'Loyber Francisco',
+        period: 'Enero 2017',
+        status: 'completed',
+        type: 'commercial',
+        image: ''
+    },
+    {
+        name: 'REMODELACIÓN DE OFICINAS SEGUNDO PISO - EDIFICIO TRIBUNALES PARANÁ',
+        address: 'Paraná, Entre Ríos',
+        client: 'Tribunales',
+        period: 'Agosto 2017',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR VICENTIN',
+        area: 120,
+        address: 'Calle Pública S/N - Paraná, Entre Ríos',
+        client: 'Vicentin Sebastian',
+        period: 'Marzo 2017',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'TRABAJOS DE REPARACIONES VARIAS EN JUZGADO DE PAZ DE VILLA ALCARAZ',
+        
+        address: 'Villa Alcaraz, Entre Ríos',
+        client: 'Juzgado de Paz',
+        period: 'Noviembre 2017',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'REMODELACIÓN OFICINAS VARIAS SEGUNDO PISO -  SALA DE AUDIENCIAS CIVIL Y COMERCIAL ',
+        
+        address: 'Paraná, Entre Ríos.',
+        client: 'Tribunales',
+        period: 'Diciembre 2018',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'INTERVENCIÓN COLUMNAS ALA OESTE Y RECOMPOSICIÓN DE DINTELES VIGAS DE MAMPOSTERÍA',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Facultad de Ciencias Económicas',
+        period: 'Marzo 2022',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR RODRIGUEZ',
+        area: 200,
+        address: 'Roustan 2560 - Paraná, Entre Ríos',
+        client: ': Rodriguez Valeria',
+        period: 'Marzo 2020',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA TRILLIZAS',
+        area: 160,
+        address: 'Isla Soledad 2320 - Paraná, Entre Ríos',
+        client: 'Leiss - Tome',
+        period: ' Febrero 2021',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'REFUNCIONALIZACIÓN PARA MERCADO MULTIPLICAR “C.I.C FLORESTA” ',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Municipalidad de Paraná',
+        period: 'Agosto 2022 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'CONSTRUCCIÓN DE SALÓN DE USOS MÚLTIPLES EN ZONA VECINAL OESTE ',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Municipalidad de Paraná',
+        period: 'Octubre 2022 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'VIVIENDA UNIFAMILIAR L - T',
+        area: 270,
+        address: 'San Luis 335 - Paraná, Entre Ríos',
+        client: ' Leiss Fabian, Tome Erica',
+        period: 'Marzo 2022 - Enero 2024',
+        status: 'completed',
+        type: 'residential',
+        image: ''
+    },
+    {
+        name: 'REFACCIONES EN MUSEO DE LA CIUDAD/ UNIDAD EJECUTORA MUNICIPAL',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Municipalidad de Paraná',
+        period: 'Enero 2023 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'REPARACIONES GENERALES EN JUZGADO DE PAZ ORO VERDE',
+        
+        address: 'Oro Verde, Entre Ríos',
+        client: 'Superior Tribunal de Justicia',
+        period: 'Agosto 2023 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'REMODELACIÓN Y CONSTRUCCIÓN DE BAÑOS EN JARDÍN MATERNAL “GAUCHITOS DE LA VIRGEN DEL LUJAN”',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Municipalidad de Paraná',
+        period: 'Diciembre 2023 - Marzo 2024',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'REFACCIONES EN MUSEO DE LA CIUDAD/ UNIDAD EJECUTORA MUNICIPAL',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Municipalidad de Paraná',
+        period: 'Enero 2023 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'PINTURA FACHADA EDIFICIO TRIBUNALES',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Superior Tribunal de Justicia',
+        period: 'Enero 2024 - Finalizada',
+        status: 'completed',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: '1° ETAPA REPARACIÓN DE TECHOS Y BALCONES, AJUSTES DEDESAGUES PLUVIALES, NUEVA VEREDA SEDE CENTRAL COPNAF -EX HOTEL CENTRAL',
+        
+        address: 'Corrientes 190 esq. Uruguay - Paraná, Entre Ríos',
+        
+        period: 'Diciembre 2024 - En construcción',
+        status: 'En Construcción',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: 'REMODELACIÓN DE LOS BAÑOS DE PLANTA BAJA EN SEDE PARANÁ DE UCA ',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Universidad Católica Argentina',
+        period: 'Enero 2025 - En construcción',
+        status: 'En Construcción',
+        type: 'government',
+        image: ''
+    },
+    {
+        name: '',
+        
+        address: '',
+        client: '',
+        period: '',
+        status: 'completed',
+        type: '',
+        image: ''
+    },
+    {
+        name: '',
+        
+        address: '',
+        client: '',
+        period: '',
+        status: 'completed',
+        type: '',
+        image: ''
+    },
+    {
+        name: '',
+        
+        address: '',
+        client: '',
+        period: '',
+        status: 'completed',
+        type: '',
+        image: ''
+    },
+    {
+        name: '',
+        
+        address: '',
+        client: '',
+        period: '',
+        status: 'completed',
+        type: '',
+        image: ''
+    },
+    {
+        name: '',
+        
+        address: '',
+        client: '',
+        period: '',
+        status: 'completed',
+        type: '',
+        image: ''
+    },
     // Add more projects here...
 ];
 
