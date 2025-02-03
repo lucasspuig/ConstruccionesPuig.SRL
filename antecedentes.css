@@ -2,7 +2,7 @@
     --primary-color: #DF6706;
     --secondary-color: #F4AF71;
     --background-color: #364e5ddf;
-    --card-background: #364e5da8;
+    --card-background: #042333ce;
     --text-primary: #ffffff;
     --text-secondary: #ffffff;
     --border-color: #b7b7b7;
@@ -30,6 +30,7 @@ body {
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Fija el fondo al desplazarse */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white;
 }
 
 .container {
@@ -39,15 +40,15 @@ body {
 }
 .logosecundario{
     align-items: center;
-    width: 25%;
-    height: 120px;
+    width: 33%;
+    height: 380px;
 }
 /* Header Styles */
 .header {
     text-align: center;
     margin-bottom: 3rem;
-    padding: 3rem 0;
-    background: var(--card-background);
+    padding: 0rem 0;
+    background: #042333e7;
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
 }
@@ -71,7 +72,7 @@ body {
     gap: 1rem;
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: var(--card-background);
+    background: #042333e7;
     border-radius: 1rem;
     box-shadow: var(--shadow-sm);
 }
@@ -157,7 +158,7 @@ select:focus {
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 320px;
     object-fit: cover;
 }
 
@@ -243,21 +244,37 @@ select:focus {
     
 }
 
-.pagination-btn {
+.pagination-btn2 {
     padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    background: black;
+    background:#dcfce7;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: white;
+    color: #154e2a;
+    font-size: 0.80rem;
+    font-weight: 700;
+}
+.pagination-btn1 {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background:#e28989;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #870000;
+    font-size: 0.80rem;
+    font-weight: 700;
 }
 
-.pagination-btn:hover:not(:disabled) {
-    background: var(--background-color);
+.pagination-btn2:hover:not(:disabled) {
+    background: #02c445;
+}
+.pagination-btn1:hover:not(:disabled) {
+    background: #aa011a;
 }
 
-.pagination-btn:disabled {
+.pagination-btn1:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }

@@ -129,77 +129,60 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-links li a');
 
-  // Carousel functionality
-    // Configuración del carrusel
-    document.querySelectorAll('.carousel-container').forEach(carousel => {
-        const images = carousel.querySelector('.carousel-images');
-        const imageCount = images.children.length;
-        let currentIndex = 0;
-        let intervalId;
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
 
-        // Crear indicadores
-        const indicators = carousel.querySelector('.carousel-indicators');
-        for (let i = 0; i < imageCount; i++) {
-        const indicator = document.createElement('button');
-        indicator.className = 'indicator' + (i === 0 ? ' active' : '');
-        indicator.addEventListener('click', () => {
-            currentIndex = i;
-            updateCarousel();
-            resetInterval();
+        // Animate nav items
+        navLinksItems.forEach((link, index) => {
+            if (navLinks.classList.contains('active')) {
+                link.parentElement.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1 + 0.3}s`;
+            } else {
+                link.parentElement.style.animation = '';
+            }
         });
-        indicators.appendChild(indicator);
-        }
+    }
 
-        function updateCarousel() {
-        images.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // Actualizar indicadores
-        carousel.querySelectorAll('.indicator').forEach((ind, i) => {
-            ind.classList.toggle('active', i === currentIndex);
-        });
-        }
-
-        function nextSlide() {
-        currentIndex = (currentIndex + 1) % imageCount;
-        updateCarousel();
-        }
-
-        function resetInterval() {
-        clearInterval(intervalId);
-        intervalId = setInterval(nextSlide, 6000);
-        }
-
-        // Iniciar carrusel automático
-        resetInterval();
-
-        // Pausar el carrusel al pasar el mouse
-        carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
-        carousel.addEventListener('mouseleave', resetInterval);
+    // Hamburger click event
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent event from bubbling
+        toggleMobileMenu();
     });
 
-    // Funcionalidad del modal (se mantiene igual)
-    const modal = document.querySelector('.modal');
-    const modalTitle = modal.querySelector('.modal-title');
-    const modalDescription = modal.querySelector('.modal-description');
-    const closeModal = modal.querySelector('.close-modal');
-
-    document.querySelectorAll('.view-details').forEach(button => {
-        button.addEventListener('click', () => {
-        const title = button.closest('.project-content').querySelector('.project-title').textContent;
-        const description = button.getAttribute('data-description');
-        
-        modalTitle.textContent = title;
-        modalDescription.textContent = description;
-        modal.style.display = 'block';
+    // Close menu when a nav link is clicked
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            
+            // Reset animations
+            navLinksItems.forEach(item => {
+                item.parentElement.style.animation = '';
+            });
         });
     });
 
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-        modal.style.display = 'none';
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            
+            // Reset animations
+            navLinksItems.forEach(item => {
+                item.parentElement.style.animation = '';
+            });
         }
     });
+
+    // Prevent menu from closing when clicking inside nav
+    navLinks.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});

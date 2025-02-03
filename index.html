@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa de Construcción</title>
     <link rel="shortcut icon" href="./assest/isologo.png"  type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="vistamobile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -14,22 +15,20 @@
 
 
     <!-- Navegación -->
-    <nav>
+    <nav >
         <div class="container">
             <div class="logo">
                 <img src="./assest/isologo-removebg-preview.png" alt="Logo Construcción">
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
-                <li><a href="#afiliaciones">Afiliaciones</a></li>
-                <li><a href="#politicas">Políticas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,8 +37,8 @@
     </nav>
 
     <!-- Sección Hero -->
-    <section class="hero">
-       
+    <section class="hero" id="inicio">
+
         <div class="logo-container">
             <img src="./assest/logocompletoblanco-removebg-preview.png" alt="Logo" class="logohero">
             
@@ -104,13 +103,16 @@
                 <div class="carousel-container">
                 <div class="carousel-images">
                     <img src="./assest/fachadaprincipalsanluis.jfif" alt="Edificio Residencial 1">
+                    <img src="./assest/sanluis sin nada.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/fachadaviejasanluis.jfif" alt="Edificio Residencial 2">
                     <img src="./assest/sanluisinteriorescaleras.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/escalerasterminadassanluis.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/iniciodeescalesrassanluis.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/sanluisinterior.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/sanluisfotopatio.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/bañosanluiss.jfif" alt="Edificio Residencial 3">
                     <img src="./assest/cocinasanluis.jfif" alt="Edificio Residencial 3">
+                    
                 </div>
                 <div class="carousel-indicators"></div>
                 </div>
@@ -163,10 +165,13 @@
             <div class="project-card">
                 <div class="carousel-container">
                 <div class="carousel-images">
-                    <img src="./assest/terminacionmuseo.jfif" alt="Parque Industrial 1">
+                    <img src="./assest/museofachada.jfif" alt="Parque Industrial 1">
                     <img src="./assest/iniciomuseo.jfif" alt="Parque Industrial 1">
-                    <img src="./assest/terminacionmuseo2.jfif" alt="Parque Industrial 1">
+                    <img src="./assest/terminacionmuseo.jfif" alt="Parque Industrial 1">
+                    <img src="./assest/museo2.jpg" alt="Parque Industrial 1">
+                    
                     <img src="./assest/iniciomuseo2.jfif" alt="Parque Industrial 1">
+                    <img src="./assest/terminacionmuseo2.jfif" alt="Parque Industrial 1">
                     <img src="./assest/terminacionmuseoo2.jfif" alt="Parque Industrial 1">
                 </div>
                 <div class="carousel-indicators"></div>
@@ -182,6 +187,94 @@
                 • Calles pavimentadas con concreto hidráulico
                 • Sistema contra incendios centralizado
                 • Certificación ISO 14001">
+                    Ver Detalles
+                    <span class="arrow">→</span>
+                </button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="./assest/general parte de adelantedesde0.jfif" alt="Edificio Residencial 1">
+                    <img src="./assest/pyb general de adenate terminado.jfif" alt="Edificio Residencial 2">
+                    <img src="./assest/pyb dos puertas comienzo.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/pyb dospuertas terminadas.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/pyb ventana y puerta adelante de 0.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/pyb ventana y puerta terminado.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/pyb general de atras terminado.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/pyb bañoterminado.jfif" alt="Edificio Residencial 3">
+                </div>
+                <div class="carousel-indicators"></div>
+                </div>
+                <div class="project-content">
+                <h2 class="project-title">PROYECTO PyB</h2>
+                <p class="project-description"></p>
+                <button class="view-details" data-description="Edificio residencial de 15 pisos con 45 apartamentos de lujo. Características principales:
+                • Estructura antisísmica de última generación
+                • Acabados en mármol y madera noble
+                • Sistema de seguridad 24/7
+                • Área social con piscina y gimnasio
+                • Estacionamiento subterráneo de 2 niveles
+                • Certificación LEED Gold">
+                    Ver Detalles
+                    <span class="arrow">→</span>
+                </button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="./assest/bersaterminadofachadas.jfif" alt="Edificio Residencial 1">
+                    <img src="./assest/bersa fachada sin terminar.jfif" alt="Edificio Residencial 2">
+                    <img src="./assest/bersaadentro sin terminar.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/bersa interior sin puerta.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/bersa puerta blindada 2.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/bersacostado.jfif" alt="Edificio Residencial 3">
+                </div>
+                <div class="carousel-indicators"></div>
+                </div>
+                <div class="project-content">
+                <h2 class="project-title">CAJERO BANCO BERSA</h2>
+                <p class="project-description"></p>
+                <button class="view-details" data-description="Edificio residencial de 15 pisos con 45 apartamentos de lujo. Características principales:
+                • Estructura antisísmica de última generación
+                • Acabados en mármol y madera noble
+                • Sistema de seguridad 24/7
+                • Área social con piscina y gimnasio
+                • Estacionamiento subterráneo de 2 niveles
+                • Certificación LEED Gold">
+                    Ver Detalles
+                    <span class="arrow">→</span>
+                </button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="./assest/gyr comienzo1.jfif" alt="Edificio Residencial 1">
+                    <img src="./assest/gyr comienzo.jfif" alt="Edificio Residencial 2">
+                    <img src="./assest/gyr proceso.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/gyr fin.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/gyr pieza sin terminar.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/gyr como quedaria.jfif" alt="Edificio Residencial 3">
+                    <img src="./assest/gyr puerta.jfif" alt="Edificio Residencial 3">
+                    
+                </div>
+                <div class="carousel-indicators"></div>
+                </div>
+                <div class="project-content">
+                <h2 class="project-title">PROYECTO GyR</h2>
+                <p class="project-description"></p>
+                <button class="view-details" data-description="Edificio residencial de 15 pisos con 45 apartamentos de lujo. Características principales:
+                • Estructura antisísmica de última generación
+                • Acabados en mármol y madera noble
+                • Sistema de seguridad 24/7
+                • Área social con piscina y gimnasio
+                • Estacionamiento subterráneo de 2 niveles
+                • Certificación LEED Gold">
                     Ver Detalles
                     <span class="arrow">→</span>
                 </button>
@@ -305,6 +398,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
