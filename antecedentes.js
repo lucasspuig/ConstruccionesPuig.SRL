@@ -105,6 +105,16 @@ const projects = [
         image: ''
     },
     {
+        name: 'PINTURA PATIO INTERNO EN SEDE PARANÁ DE UCA ',
+        
+        address: 'Paraná, Entre Ríos',
+        client: 'Universidad Católica Argentina',
+        period: 'Enero 2025 - En construcción',
+        status: 'En Construcción',
+        type: 'government',
+        image: './assest/pinturapatiointernouca.jfif'
+    },
+    {
         name: 'VIVIENDA TRILLIZAS',
         area: 160,
         address: 'Isla Soledad 2320 - Paraná, Entre Ríos',
@@ -113,6 +123,15 @@ const projects = [
         status: 'completed',
         type: 'residential',
         image: './assest/trillizas.jfif'
+    },
+    {
+        name: 'REMODELACIÓN DE OFICINAS SEGUNDO PISO - EDIFICIO TRIBUNALES PARANÁ',
+        address: 'Paraná, Entre Ríos',
+        client: 'Tribunales',
+        period: 'Agosto 2017',
+        status: 'completed',
+        type: 'government',
+        image: './assest/tribunalessala.jfif'
     },
     {
         name: 'VIVIENDA UNIFAMILIAR GRECA',
@@ -323,15 +342,7 @@ const projects = [
         type: 'commercial',
         image: './assest/azullogopuig.png'
     },
-    {
-        name: 'REMODELACIÓN DE OFICINAS SEGUNDO PISO - EDIFICIO TRIBUNALES PARANÁ',
-        address: 'Paraná, Entre Ríos',
-        client: 'Tribunales',
-        period: 'Agosto 2017',
-        status: 'completed',
-        type: 'government',
-        image: './assest/azullogopuig.png'
-    },
+
     {
         name: 'VIVIENDA UNIFAMILIAR VICENTIN',
         area: 120,

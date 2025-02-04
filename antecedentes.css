@@ -157,8 +157,8 @@ select:focus {
 }
 
 .project-image {
-    width: 100%;
-    height: 320px;
+    width: 110%;
+    height: 360px;
     object-fit: cover;
 }
 

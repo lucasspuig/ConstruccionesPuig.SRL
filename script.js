@@ -4,31 +4,6 @@ AOS.init({
     once: true
 });
 
-// Navegación Móvil Mejorada
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links li');
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    
-    navItems.forEach((item, index) => {
-        if (item.style.animation) {
-            item.style.animation = '';
-        } else {
-            item.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1 + 0.3}s`;
-        }
-    });
-});
-
-// Cerrar menú móvil al hacer clic fuera
-document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-    }
-});
 
 // Scroll Suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -129,60 +104,115 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksItems = document.querySelectorAll('.nav-links li a');
 
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+  // Carousel functionality
+    // Configuración del carrusel
+    document.querySelectorAll('.carousel-container').forEach(carousel => {
+        const images = carousel.querySelector('.carousel-images');
+        const imageCount = images.children.length;
+        let currentIndex = 0;
+        let intervalId;
 
-        // Animate nav items
-        navLinksItems.forEach((link, index) => {
-            if (navLinks.classList.contains('active')) {
-                link.parentElement.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1 + 0.3}s`;
-            } else {
-                link.parentElement.style.animation = '';
-            }
+        // Crear indicadores
+        const indicators = carousel.querySelector('.carousel-indicators');
+        for (let i = 0; i < imageCount; i++) {
+        const indicator = document.createElement('button');
+        indicator.className = 'indicator' + (i === 0 ? ' active' : '');
+        indicator.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+            resetInterval();
         });
-    }
+        indicators.appendChild(indicator);
+        }
 
-    // Hamburger click event
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent event from bubbling
-        toggleMobileMenu();
+        function updateCarousel() {
+        images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Actualizar indicadores
+        carousel.querySelectorAll('.indicator').forEach((ind, i) => {
+            ind.classList.toggle('active', i === currentIndex);
+        });
+        }
+
+        function nextSlide() {
+        currentIndex = (currentIndex + 1) % imageCount;
+        updateCarousel();
+        }
+
+        function resetInterval() {
+        clearInterval(intervalId);
+        intervalId = setInterval(nextSlide, 6000);
+        }
+
+        // Iniciar carrusel automático
+        resetInterval();
+
+        // Pausar el carrusel al pasar el mouse
+        carousel.addEventListener('mouseenter', () => clearInterval(intervalId));
+        carousel.addEventListener('mouseleave', resetInterval);
     });
 
-    // Close menu when a nav link is clicked
-    navLinksItems.forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            
-            // Reset animations
-            navLinksItems.forEach(item => {
-                item.parentElement.style.animation = '';
-            });
+    // Funcionalidad del modal (se mantiene igual)
+    const modal = document.querySelector('.modal');
+    const modalTitle = modal.querySelector('.modal-title');
+    const modalDescription = modal.querySelector('.modal-description');
+    const closeModal = modal.querySelector('.close-modal');
+
+    document.querySelectorAll('.view-details').forEach(button => {
+        button.addEventListener('click', () => {
+        const title = button.closest('.project-content').querySelector('.project-title').textContent;
+        const description = button.getAttribute('data-description');
+        
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'block';
         });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+        modal.style.display = 'none';
+        }
+    });
+
+    // Select DOM elements
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    // Toggle menu
+    function toggleMenu() {
+    // Toggle active classes
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    
+    // Toggle body scroll
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    }
+
+    // Event Listeners
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking a link
+    links.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+    });
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
-        if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-            
-            // Reset animations
-            navLinksItems.forEach(item => {
-                item.parentElement.style.animation = '';
-            });
-        }
+    const isClickInside = navLinks.contains(e.target) || hamburger.contains(e.target);
+    
+    if (!isClickInside && navLinks.classList.contains('active')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        document.body.style.overflow = '';
+    }
     });
-
-    // Prevent menu from closing when clicking inside nav
-    navLinks.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-});
