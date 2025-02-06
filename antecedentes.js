@@ -85,7 +85,7 @@ const projects = [
         image: './assest/columnas1.jfif'
     },
     {
-        name: '1° ETAPA REPARACIÓN DE TECHOS Y BALCONES, AJUSTES DEDESAGUES PLUVIALES, NUEVA VEREDA SEDE CENTRAL COPNAF -EX HOTEL CENTRAL',
+        name: '1° ETAPA REPARACIÓN DE TECHOS Y BALCONES, AJUSTES DE DESAGUES PLUVIALES, NUEVA VEREDA SEDE CENTRAL COPNAF -EX HOTEL CENTRAL',
         
         address: 'Corrientes 190 esq. Uruguay - Paraná, Entre Ríos',
         
