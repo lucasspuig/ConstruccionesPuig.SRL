@@ -507,6 +507,10 @@ nav .container {
 }
 
 /* Sección Contacto */
+.num{
+    list-style-type: none;
+    text-decoration: none;
+}
 .contact {
     padding: 100px 0;
     background: #000000bf;
