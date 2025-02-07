@@ -2,7 +2,7 @@
    /*logo nav*/
    .logo img {
     height: 64px;
-    width: 93%;
+    width: auto;
 }
 
 /*logo principal*/
@@ -161,7 +161,7 @@ select {
     /*logo nav*/
     .logo img {
         height: 64px;
-        width: 93%;
+        width: auto;
     }
     
     /*logo principal*/
