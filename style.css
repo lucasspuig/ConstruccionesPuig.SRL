@@ -255,7 +255,7 @@ nav .container {
         color: white;
     }
 
-    .projects-grid {
+    .projects-grid1 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 2rem;
@@ -263,7 +263,7 @@ nav .container {
         margin: 0 auto;
     }
 
-    .project-card {
+    .project-card1 {
         position: relative;
         height: 580px;
         width: 100%;
@@ -315,7 +315,7 @@ nav .container {
         width: 1.2rem;
     }
 
-    .project-content {
+    .project-content1 {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -325,7 +325,7 @@ nav .container {
         z-index: 2;
     }
 
-    .project-title {
+    .project-title1 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
         color: white;
@@ -333,7 +333,7 @@ nav .container {
         text-align: center;
     }
 
-    .project-description {
+    .project-description1 {
         color: #e5e5e5;
         font-size: 0.9rem;
         line-height: 1.5;
@@ -362,7 +362,7 @@ nav .container {
         transform: translateY(-2px);
     }
 
-    .project-card::before {
+    .project-card1::before {
         content: '';
         position: absolute;
         top: 0;
@@ -683,7 +683,7 @@ nav .container {
         background-color: var(--text-color);
         transition: all 0.3s ease-in-out;
     }
-    
+   
     /* Mobile Styles */
     @media (max-width: 768px) {
         .hamburger {

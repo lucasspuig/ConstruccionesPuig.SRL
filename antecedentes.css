@@ -148,7 +148,7 @@ select:focus {
     margin-bottom: 2rem;
 }
 
-.project-card {
+.project-card1 {
     background: var(--card-background);
     border-radius: 1rem;
     overflow: hidden;
@@ -156,7 +156,7 @@ select:focus {
     transition: all 0.3s ease;
 }
 
-.project-card:hover {
+.project-card1:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
