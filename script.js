@@ -82,7 +82,7 @@ if (contactForm) {
 }
 
 // Efecto Hover en Tarjetas de Proyecto
-document.querySelectorAll('.project-card').forEach(card => {
+document.querySelectorAll('.project-card1').forEach(card => {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -160,7 +160,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 
     document.querySelectorAll('.view-details').forEach(button => {
         button.addEventListener('click', () => {
-        const title = button.closest('.project-content').querySelector('.project-title').textContent;
+        const title = button.closest('.project-content1').querySelector('.project-title1').textContent;
         const description = button.getAttribute('data-description');
         
         modalTitle.textContent = title;

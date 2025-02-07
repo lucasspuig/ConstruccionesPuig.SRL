@@ -67,6 +67,23 @@ h1 {
     overflow: hidden;
 
 }
+.modal-content {
+    margin-top: 50%;
+    margin-left: 2%;
+    /* align-items: center; */
+    text-align: center;
+    position: relative;
+    background-color: var(--background-light);
+    /* margin: 42% auto; */
+    padding: 2rem;
+    width: 80%;
+    /* max-width: 562px; */
+    border-radius: 0.5rem;
+}
+    .ver-mas-btn {
+    margin-top: 8%;
+}
+
 /* Footer */
 .footer-content {
     grid-template-columns: 1fr;
@@ -226,6 +243,23 @@ select {
         overflow: hidden;
     
     }
+    .modal-content {
+        margin-top: 50%;
+        margin-left: 2%;
+        /* align-items: center; */
+        text-align: center;
+        position: relative;
+        background-color: var(--background-light);
+        /* margin: 42% auto; */
+        padding: 2rem;
+        width: 78%;
+        /* max-width: 562px; */
+        border-radius: 0.5rem;
+    }
+        .ver-mas-btn {
+        margin-top: 8%;
+    }
+    
     /* Footer */
     .footer-content {
         grid-template-columns: 1fr;
