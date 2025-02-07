@@ -74,7 +74,7 @@ body {
 /* Navegación */
 nav {
     background: var(--background-light);
-    padding: 20px 0;
+    padding: 50px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -88,11 +88,13 @@ nav .container {
     justify-content: space-between;
     align-items: center;
 }
-
-.logo img {
-    height: 75px;
-    width: 100%;
+.container1{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 300px;
 }
+
+
 
 .nav-links {
     display: flex;
@@ -105,6 +107,7 @@ nav .container {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    
 }
 
 .nav-links a:hover {
@@ -125,7 +128,7 @@ nav .container {
 .logohero  {
     width: 80%; /* Ajusta el tamaño del logo */
     height: 20%;
-   
+
 }
 .hero {
 
