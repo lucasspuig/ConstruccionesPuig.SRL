@@ -174,7 +174,7 @@ select {
 
 
 
-@media (max-width:375px) {
+@media (min-width:375px) and (max-width:423px) {
     /*logo nav*/
     .logo img {
         height: 64px;
