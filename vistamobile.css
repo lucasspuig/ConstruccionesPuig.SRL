@@ -46,18 +46,15 @@
     height: 727px;
     width: 100%;
 }
-
-/*servicios en el hero*/
-.service-category {
-    min-width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    opacity: 0.7;
-    transition: opacity 0.5s;
-    margin-right: 1px;
-}
+    /*servicios en el hero*/
+    .slider {
+        width: 115%;
+        height: auto;
+        margin-left: -15%;
+        overflow: hidden;
+        
+        
+    }
 
 /* Ajuste en "Nosotros" */
 .about-content {
@@ -279,9 +276,9 @@ select {
 
     /*servicios en el hero*/
     .slider {
-        width: 100%;
+        width: 115%;
         height: auto;
-        text-align: center;
+        margin-left: -15%;
         overflow: hidden;
         
         
