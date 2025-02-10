@@ -41,8 +41,9 @@ window.addEventListener('scroll', () => {
 // Animación de Números en Estadísticas
 const observerStats = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
             animateNumbers(entry.target);
+            entry.target.setAttribute('data-animated', 'true');
         }
     });
 }, { threshold: 0.5 });
@@ -52,22 +53,32 @@ document.querySelectorAll('.stat-number').forEach(stat => {
 });
 
 function animateNumbers(element) {
-    const target = parseInt(element.textContent);
-    let current = 0;
-    const duration = 2000;
-    const increment = target / (duration / 16);
+    const target = parseInt(element.getAttribute('data-target') || element.textContent);
+    const duration = 3000; // Duration in milliseconds
+    const startTime = performance.now();
+    const startValue = 0;
     
-    function updateNumber() {
-        current += increment;
-        if (current < target) {
-            element.textContent = Math.floor(current) + '+';
+    function easeOutQuad(t) {
+        return t * (2 - t);
+    }
+    
+    function updateNumber(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        const easedProgress = easeOutQuad(progress);
+        const currentValue = Math.floor(startValue + (target - startValue) * easedProgress);
+        
+        element.textContent = currentValue.toLocaleString() + '+';
+        
+        if (progress < 1) {
             requestAnimationFrame(updateNumber);
         } else {
-            element.textContent = target + '+';
+            element.textContent = target.toLocaleString() + '+';
         }
     }
     
-    updateNumber();
+    requestAnimationFrame(updateNumber);
 }
 
 // Formulario de Contacto

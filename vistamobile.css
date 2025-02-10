@@ -354,7 +354,24 @@ select {
             font-size: 13px;
             
         }
-        
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
     
 /************ANTECEDENTES****************/
     /*logo*/
