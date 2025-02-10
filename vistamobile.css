@@ -278,15 +278,13 @@ select {
     }
 
     /*servicios en el hero*/
-    .service-category {
-        min-width: 100%;
+    .slider {
+        width: 100%;
+        height: auto;
         text-align: center;
-        font-size: 1.2em;
-        font-weight: bold;
-        letter-spacing: 2px;
-        opacity: 0.7;
-        transition: opacity 0.5s;
-        margin-right: 1px;
+        overflow: hidden;
+        
+        
     }
 
    /* Ajuste en "Nosotros" */
