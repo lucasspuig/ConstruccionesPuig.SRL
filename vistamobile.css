@@ -291,9 +291,9 @@ select {
 
     /*servicios en el hero*/
     .slider {
-        width: 115%;
+        width: 100%;
         height: auto;
-        margin-left: -15%;
+        margin-left: 0%;
         overflow: hidden;
         
         
