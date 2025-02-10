@@ -14,6 +14,16 @@
         justify-content: center;
         transition: left 0.3s ease-in-out;
     }
+    nav {
+        background: var(--background-light);
+        padding: 0px 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 1px 20px;
+    }
     .container1 {
         max-width: 1200px;
         margin: 0 auto;
@@ -38,15 +48,16 @@
 }
 
 /*servicios en el hero*/
-.services-bar .container {
-    flex-direction: row;
-    gap: 10px;
-    
-    }
-    
-    .services-bar span {
-    font-size: 12px;
-    }
+.service-category {
+    min-width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+    margin-right: 1px;
+}
 
 /* Ajuste en "Nosotros" */
 .about-content {
@@ -267,15 +278,16 @@ select {
     }
 
     /*servicios en el hero*/
-    .services-bar .container {
-        flex-direction: row;
-        gap: 10px;
-        
-        }
-        
-        .services-bar span {
-        font-size: 12px;
-        }
+    .service-category {
+        min-width: 100%;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        opacity: 0.7;
+        transition: opacity 0.5s;
+        margin-right: 1px;
+    }
 
    /* Ajuste en "Nosotros" */
     .about-content {

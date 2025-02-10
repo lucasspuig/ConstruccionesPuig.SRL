@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, {
-        threshold: 0.6// Se activa cuando el 30% de la carta es visible
+        threshold: 0.4// Se activa cuando el 30% de la carta es visible
     });
 
     cards.forEach(card => observer.observe(card));

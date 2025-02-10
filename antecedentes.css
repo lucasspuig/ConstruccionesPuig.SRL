@@ -148,18 +148,18 @@ select:focus {
     margin-bottom: 2rem;
 }
 
-.project-card1 {
+.project-card {
     background: var(--card-background);
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
-
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
+
 
 .project-image {
     width: 110%;
