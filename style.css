@@ -38,6 +38,16 @@ body {
 }
 
 /* Barra Superior Mejorada */
+
+
+
+.imglog {
+    width: 150px;
+    height: 130px;
+    margin-left: 17%;
+}
+
+
 .top-bar {
     background: var(--secondary-color);
     color: var(--white);
@@ -52,7 +62,7 @@ body {
 }
 
 .contact-info span {
-    margin-right: 20px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -74,7 +84,7 @@ body {
 /* Navegación */
 nav {
     background: var(--background-light);
-    padding: 50px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -83,8 +93,9 @@ nav {
     box-shadow: 0 1px 20px
 }
 
-nav .container {
+nav  {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
@@ -92,14 +103,16 @@ nav .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 300px;
+    margin-left: 5%;
 }
 
 
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     list-style: none;
+   
 }
 
 .nav-links a {
