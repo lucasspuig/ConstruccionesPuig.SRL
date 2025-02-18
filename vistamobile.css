@@ -2,18 +2,12 @@
 
 
 @media (min-width:425px) and (max-width:635px){
+    
     .nav-links {
-        position: fixed;
-        top: 16%;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--background-light);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease-in-out;
+        margin-left: -219px;
+        top: 7.5%;
     }
+    
     nav {
         background: var(--background-light);
         padding: 0px 0;
@@ -28,7 +22,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: -15%;
+        margin-left: -6%;
     }
    
     /*logo nav*/
@@ -128,6 +122,7 @@ h1 {
         width: 51px;
         height: 3px;
         background: var(--primary-color);
+        margin-left: 0px;
     }
     .footer-bottom{
         display: flex;
@@ -213,22 +208,15 @@ select {
 
 @media (min-width:490px)and (max-width:633px){
     .nav-links {
-        position: fixed;
-        top: 16%;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--background-light);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease-in-out;
+        margin-left: -252px;
+        top: 7.5%;
     }
+    
     .container1 {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: 7%;
+        margin-left: -1%;
     }
 }
 
@@ -240,22 +228,14 @@ select {
 @media (min-width:375px) and (max-width:424px) {
 
     .nav-links {
-        position: fixed;
-        top: 16%;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background: var(--background-light);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        transition: left 0.3s ease-in-out;
+        margin-left: -194px;
+        top: 6.5%;
     }
     .container1 {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: -24%;
+        margin-left: -8%;
     }
     nav {
         background: var(--background-light);
@@ -371,6 +351,7 @@ select {
             width: 51px;
             height: 3px;
             background: var(--primary-color);
+            margin-left: 0px;
         }
             .footer-bottom{
             font-size: 13px;

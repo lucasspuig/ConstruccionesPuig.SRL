@@ -311,6 +311,11 @@ nav  {
 
 
 /* Sección Nosotros */
+.containe1{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 .about-section {
     padding: 100px 0;
     color: white;
@@ -667,7 +672,7 @@ h1.visible {
         }
     }
     
-    .container {
+    .containerr3 {
         text-align: center;
         margin-top: 3%;
     }
@@ -764,7 +769,7 @@ h1.visible {
     color: white;
     
 }
-.container h2{
+.containercont h2{
     color: white;
 }
 .testimonials-grid {
@@ -806,6 +811,12 @@ h1.visible {
 }
 
 /* Sección Contacto */
+.containercont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  
+}
 .num{
     list-style-type: none;
     text-decoration: none;
@@ -863,6 +874,12 @@ h1.visible {
 }
 
 /* Footer Mejorado */
+.containercont2{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
 .footer-bottom{
     display: flex;
     flex-direction: row;
@@ -930,7 +947,7 @@ h1.visible {
     width: 50px;
     height: 2px;
     background: var(--primary-color);
-   margin-left: 156px;
+   margin-left: 155px;
 }
 
 .footer-section ul {
@@ -1033,7 +1050,7 @@ h1.visible {
     
         .nav-links {
             position: fixed;
-            top: 14%;
+            top: 7.1%;
             left: -100%;
             width: 84%;
             height: 100vh;
