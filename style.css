@@ -220,49 +220,96 @@ nav  {
     color: var(--background-light);
 }
 
-/* Barra de Servicios */
-.slider {
-    width: 90%;
-    height: auto;
+.container {
     text-align: center;
-    overflow: hidden;
-    margin-left: 5%;
+}
+
+/* Services Slider */
+.services-slider {
+    width: 250%;
     
+    margin: 0 auto;
+    padding: 0px 0;
+    background: #364e5ddf;
+    overflow: hidden;
+    position: relative;
 }
 
-.slider .slide-track {
+.services-slider::before,
+.services-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+}
+
+.services-slider::before {
+    left: 0;
+    background: linear-gradient(to right, #364e5ddf, transparent);
+}
+
+.services-slider::after {
+    right: 0;
+    background: linear-gradient(to left,#364e5ddf, transparent);
+}
+
+.slide-track {
     display: flex;
-    animation: scroll 40s linear infinite;
-    -webkit-animation: scroll 40s linear infinite;
-    width: calc(150px * 14);
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+    gap: 40px;
+    padding: 20px;
 }
 
-.slider .slide {
-    width: 100%;
-    gap: 20px;
+.slide-track:hover {
+    animation-play-state: paused;
 }
 
-.slider .slide img {
-    width: 100%;
+.slide {
+    flex: 0 0 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.slide:hover {
+    transform: scale(1.1);
+}
+
+.slide:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 @keyframes scroll {
     0% {
-        -webkit-transform: translateX(0);
         transform: translateX(0);
     }
     100% {
-        -webkit-transform: translateX(calc(-200px * 7));
-        transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7 - 40px * 7));
     }
 }
- .imagenmal {
-    margin-top: 16%;
+
+/* Remove specific margin adjustments */
+.imagenmal, .imagenmal2 {
+    margin-top: 0;
 }
-/*logoarenera*/
-.imagenmal2{
-    margin-top: -14%;
-}
+
+
+
 /* Sección Nosotros */
 .about-section {
     padding: 100px 0;
@@ -883,6 +930,7 @@ h1.visible {
     width: 50px;
     height: 2px;
     background: var(--primary-color);
+   margin-left: 156px;
 }
 
 .footer-section ul {
