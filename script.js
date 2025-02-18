@@ -245,3 +245,5 @@ document.querySelectorAll('.project-card1').forEach(card => {
     }
 
     setInterval(slideCategories, 5000);
+
+

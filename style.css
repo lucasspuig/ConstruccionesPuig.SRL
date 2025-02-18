@@ -608,6 +608,7 @@ h1.visible {
         margin-bottom: 6%;
     }
     
+
     @keyframes slideUp {
         0% {
             transform: translateY(50px);
@@ -619,9 +620,16 @@ h1.visible {
         }
     }
     
+    .container {
+        text-align: center;
+        margin-top: 3%;
+    }
+    
     .ver-mas-btn {
         position: relative;
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
         padding: 15px 30px;
         font-size: 18px;
         font-weight: bold;
@@ -635,16 +643,16 @@ h1.visible {
         transition: all 0.4s ease;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         margin-top: 3%;
-        opacity: 0; /* Inicialmente invisible */
-        transform: translateY(50px); /* Desplazado hacia abajo */
+        opacity: 0;
+        transform: translateY(50px);
         transition: opacity 1s ease-out, transform 1s ease-out;
+        text-decoration: none;
     }
     
     .ver-mas-btn.visible {
-        opacity: 1; /* Se hace visible */
-        transform: translateY(0); /* Vuelve a su posición normal */
+        opacity: 1;
+        transform: translateY(0);
     }
-    
     
     .ver-mas-btn::before {
         content: "";
@@ -664,9 +672,44 @@ h1.visible {
     }
     
     .ver-mas-btn:hover {
-        color: #333333;
+        color: #ffffff;
         background: linear-gradient(90deg, #d79459, #e06602);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .ver-mas-btn:hover .arrow-icon {
+        animation-play-state: paused;
+    }
+    
+    .button-text {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .arrow-icon {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        animation: arrowSlide 1.2s ease-in-out infinite;
+    }
+    
+    .arrow-icon svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 2.5;
+    }
+    
+    @keyframes arrowSlide {
+        0% {
+            transform: translateX(-4px);
+        }
+        50% {
+            transform: translateX(4px);
+        }
+        100% {
+            transform: translateX(-4px);
+        }
     }
 /* Sección Testimonios */
 .testimonials {

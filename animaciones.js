@@ -87,3 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     statItems.forEach(item => observer.observe(item));
 });
+
+
+
+//boton ver mas
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        document.querySelector('.ver-mas-btn').classList.add('visible');
+    }, 100);
+});
