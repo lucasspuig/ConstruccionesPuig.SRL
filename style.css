@@ -1188,3 +1188,65 @@ h1.visible {
             transform: translateY(-9px) rotate(-45deg);
         }
     }
+
+
+    /* Dark mode styles */
+    body.dark-mode {
+    background-color: var(--dark-background);
+    }
+
+    body.dark-mode .background-image {
+    filter: brightness(0.4);
+    }
+
+    body.dark-mode nav {
+    background: rgba(0, 0, 0, 0.9);
+    }
+
+    body.dark-mode .about-section {
+    background: rgba(0, 0, 0, 0.95);
+    }
+
+    body.dark-mode .testimonial-card {
+    background: rgba(223, 104, 6, 0.9);
+    }
+
+    body.dark-mode .contact {
+    background: rgba(0, 0, 0, 0.95);
+    }
+
+    body.dark-mode .footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    /* Theme toggle button styles */
+    .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+    }
+
+    .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    }
+
+    .theme-toggle i {
+    font-size: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .theme-toggle {
+            position: absolute;
+            top: 51px;
+            right: 146px;
+        }
+    }

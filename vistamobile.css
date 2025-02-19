@@ -143,7 +143,11 @@ h1 {
         
     }
     
-
+    .theme-toggle {
+        position: absolute;
+        top: 51px;
+        right: 116px;
+    }
 /************ANTECEDENTES****************/
 /*logo*/
 .logosecundario {
@@ -375,7 +379,11 @@ select {
             }
             
         }
-    
+        .theme-toggle {
+            position: absolute;
+            top: 44px;
+            right: 125px;
+        }
 /************ANTECEDENTES****************/
     /*logo*/
     .logosecundario {
