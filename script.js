@@ -228,22 +228,6 @@ document.querySelectorAll('.project-card1').forEach(card => {
     }
     });
 
-    //slide de servicios
-    const slidingContent = document.getElementById('slidingContent');
-    const categories = Array.from(slidingContent.children);
-    let currentIndex = 0;
 
-    function updateActiveCategory() {
-        categories.forEach(category => category.classList.remove('active'));
-        categories[currentIndex].classList.add('active');
-    }
-
-    function slideCategories() {
-        currentIndex = (currentIndex + 1) % categories.length;
-        slidingContent.style.transform = `translateX(-${currentIndex * 100}%)`;
-        updateActiveCategory();
-    }
-
-    setInterval(slideCategories, 5000);
 
 
