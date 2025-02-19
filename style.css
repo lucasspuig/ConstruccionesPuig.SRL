@@ -982,8 +982,14 @@ h1.visible {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
+        display: flex;
+        gap: 0px;
+        list-style: none;
+    
+    }
+    .nav-links {
         position: fixed;
-        top: 80px;
+        top: 10px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
