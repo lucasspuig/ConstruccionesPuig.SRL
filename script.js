@@ -229,5 +229,7 @@ document.querySelectorAll('.project-card1').forEach(card => {
     });
 
 
-
-
+// Cuando abres el menú
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.body.classList.toggle('menu-open');
+});
