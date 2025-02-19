@@ -90,7 +90,7 @@ const projects = [
         address: 'Corrientes 190 esq. Uruguay - Paraná, Entre Ríos',
         
         period: 'Diciembre 2024 - En construcción',
-        status: 'En Construcción',
+        status: 'in-progress',
         type: 'government',
         image: ''
     },
@@ -100,7 +100,7 @@ const projects = [
         address: 'Paraná, Entre Ríos',
         client: 'Universidad Católica Argentina',
         period: 'Enero 2025 - En construcción',
-        status: 'En Construcción',
+        status: 'in-progress',
         type: 'government',
         image: ''
     },

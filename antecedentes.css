@@ -43,11 +43,32 @@ body {
     margin: 0 auto;
     padding: 2rem;
 }
-.logosecundario{
-    align-items: center;
-    width: 33%;
+
+/* Estilos del header */
+
+
+/* Logo principal */
+.logosecundario {
+    width: 33%; /* Ajusta el tamaño como necesites */
     height: 380px;
+    opacity: 0; /* Oculta el logo al principio */
+    transform: translateY(-50px); /* Mueve el logo hacia arriba inicialmente */
+    animation: fadeInUp 3s forwards; /* Llama a la animación */
 }
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0; /* Comienza oculto */
+        transform: translateY(-160px); /* Mueve hacia arriba */
+    }
+    100% {
+        opacity: 1; /* Al final, se vuelve visible */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+
 /* Header Styles */
 .header {
     text-align: center;
@@ -80,6 +101,15 @@ body {
     background: #042333e7;
     border-radius: 1rem;
     box-shadow: var(--shadow-sm);
+    opacity: 0; /* Oculta la sección al principio */
+    transform: translateX(-60px); /* Desplaza la sección hacia la izquierda inicialmente */
+    transition: opacity 1.9s ease, transform 1.9s ease; /* Suaviza el cambio */
+}
+
+/* Clase para activar la animación de entrada */
+.filters-container.show {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateX(0); /* Regresa a su posición original */
 }
 
 @media (min-width: 768px) {
@@ -154,12 +184,27 @@ select:focus {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
+    transform: translateY(10px); /* Mueve la carta hacia abajo inicialmente */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suaviza el cambio */
 }
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
 }
 
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Ajusta según sea necesario */
+}
+
+
+
+/* Clase para activar la animación de entrada */
+.project-card.show {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Regresa a su posición original */
+}
 
 .project-image {
     width: 110%;
