@@ -245,15 +245,7 @@ nav  {
     z-index: 2;
 }
 
-.services-slider::before {
-    left: 0;
-    background: linear-gradient(to right, #364e5ddf, transparent);
-}
 
-.services-slider::after {
-    right: 0;
-    background: linear-gradient(to left,#364e5ddf, transparent);
-}
 
 .slide-track {
     display: flex;
