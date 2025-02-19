@@ -63,7 +63,7 @@ const projects = [
     },
 
     {
-        name: 'REMODELACIÓN Y CONSTRUCCIÓN DE BAÑOS EN JARDÍN MATERNAL “GAUCHITOS DE LA VIRGEN DEL LUJAN”',
+        name: 'REMODELACIÓN Y CONSTRUCCIÓN DE BAÑOS EN JARDÍN MATERNAL ',
         
         address: 'Paraná, Entre Ríos',
         client: 'Municipalidad de Paraná',
@@ -85,24 +85,24 @@ const projects = [
         image: './assest/columnas1.jfif'
     },
     {
-        name: '1° ETAPA REPARACIÓN DE TECHOS Y BALCONES, AJUSTES DE DESAGUES PLUVIALES, NUEVA VEREDA SEDE CENTRAL COPNAF -EX HOTEL CENTRAL',
+        name: '1° ETAPA REPARACIÓN-SEDE CENTRAL COPNAF-EX HOTEL CENTRAL',
         
         address: 'Corrientes 190 esq. Uruguay - Paraná, Entre Ríos',
         
         period: 'Diciembre 2024 - En construcción',
         status: 'in-progress',
         type: 'government',
-        image: ''
+        image: './assest/azullogopuig.png'
     },
     {
-        name: 'REMODELACIÓN DE LOS BAÑOS DE PLANTA BAJA EN SEDE PARANÁ DE UCA ',
+        name: 'REMODELACIÓN DE BAÑOS EN SEDE PARANÁ DE UCA ',
         
         address: 'Paraná, Entre Ríos',
         client: 'Universidad Católica Argentina',
         period: 'Enero 2025 - En construcción',
         status: 'in-progress',
         type: 'government',
-        image: ''
+        image: './assest/azullogopuig.png'
     },
     {
         name: 'PINTURA PATIO INTERNO EN SEDE PARANÁ DE UCA ',
