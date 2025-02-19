@@ -4,8 +4,8 @@
 @media (min-width:425px) and (max-width:635px){
     
     .nav-links {
-        margin-left: -219px;
-        top: 7.5%;
+        
+        top: 15.5%;
     }
     
     nav {
@@ -22,7 +22,7 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: -6%;
+        margin-left: -14%;
     }
    
     /*logo nav*/
@@ -208,15 +208,15 @@ select {
 
 @media (min-width:490px)and (max-width:633px){
     .nav-links {
-        margin-left: -252px;
-        top: 7.5%;
+        
+        top: 16.1%;
     }
     
     .container1 {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: -1%;
+        margin-left: -4%;
     }
 }
 
@@ -228,14 +228,14 @@ select {
 @media (min-width:375px) and (max-width:424px) {
 
     .nav-links {
-        margin-left: -194px;
-        top: 6.5%;
+        
+        top: 13.5%;
     }
     .container1 {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 300px;
-        margin-left: -8%;
+        margin-left: -16%;
     }
     nav {
         background: var(--background-light);
