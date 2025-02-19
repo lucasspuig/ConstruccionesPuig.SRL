@@ -228,7 +228,7 @@ select {
 @media (min-width:375px) and (max-width:424px) {
 
     .nav-links {
-        
+        padding-bottom: 10%;
         top: 16.4%;
     }
     .container1 {
