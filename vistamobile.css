@@ -384,6 +384,14 @@ select {
             top: 44px;
             right: 125px;
         }
+        /*asesorias*/
+        .asesorias-header p {
+            font-size: 1rem;
+            padding: 0 20px;
+        }
+        .asesorias-header h2 {
+            font-size: 1.9rem;
+        }
 /************ANTECEDENTES****************/
     /*logo*/
     .logosecundario {
