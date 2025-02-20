@@ -124,7 +124,7 @@ nav  {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 300px;
-    margin-left: 3%;
+    margin-left: 7%;
 }
 
 
@@ -1435,11 +1435,11 @@ h1::after {
     }
 
     body.dark-mode nav {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.692);
     }
 
     body.dark-mode .about-section {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.692);
     }
 
     body.dark-mode .testimonial-card {
@@ -1447,13 +1447,26 @@ h1::after {
     }
 
     body.dark-mode .contact {
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.692);
     }
 
     body.dark-mode .footer {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.692);
     }
 
+    body.dark-mode  .view-details{
+        background: linear-gradient(90deg, #DF6706, #F4AF71);
+        } 
+
+    body.dark-mode  .submit-btn{
+            background: linear-gradient(90deg, #DF6706, #F4AF71);
+        } 
+        
+    body.dark-mode .asesoria-card {
+        background-color: rgba(0, 0, 0, 0.413);
+        }
+
+        
     /* Theme toggle button styles */
     .theme-toggle {
     background: none;
