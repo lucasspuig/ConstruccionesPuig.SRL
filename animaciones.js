@@ -140,3 +140,33 @@ function toggleDarkMode() {
   document.addEventListener('DOMContentLoaded', () => {
     setInitialTheme();
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".asesorias-header");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.add("visible");
+                observer.unobserve(header); // Deja de observar una vez activado
+            }
+        });
+    }, { threshold: 0.9 });
+
+    observer.observe(header);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".asesoria-card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Deja de observar una vez activado
+            }
+        });
+    }, { threshold: 0.8 });
+
+    cards.forEach(card => observer.observe(card));
+});
