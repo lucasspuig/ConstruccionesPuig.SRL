@@ -426,10 +426,10 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" data-aos="fade-left">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Mensaje" required></textarea>
+                <form class="contact-form" data-aos="fade-left" id="contactForm">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="mensaje" placeholder="Mensaje" required></textarea>
                     <button type="submit" class="submit-btn">Enviar Mensaje</button>
                 </form>
             </div>
@@ -482,5 +482,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="./script.js"></script>
     <script src="./animaciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

@@ -81,16 +81,7 @@ function animateNumbers(element) {
     requestAnimationFrame(updateNumber);
 }
 
-// Formulario de Contacto
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Aquí iría la lógica para enviar el formulario
-        alert('Mensaje enviado con éxito!');
-        contactForm.reset();
-    });
-}
+
 
 // Efecto Hover en Tarjetas de Proyecto
 document.querySelectorAll('.project-card1').forEach(card => {
@@ -232,4 +223,53 @@ document.querySelectorAll('.project-card1').forEach(card => {
 // Cuando abres el menú
 document.querySelector('.hamburger').addEventListener('click', function() {
     document.body.classList.toggle('menu-open');
+});
+
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    const mailtoLink = `mailto:construccionespuig@hotmail.com?subject=Nuevo mensaje de ${nombre}&body=Nombre: ${nombre}%0D%0AEmail: ${email}%0D%0AMensaje: ${mensaje}`;
+    const whatsappLink = `https://wa.me/5493434194377?text=Nombre: ${encodeURIComponent(nombre)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
+
+    // Primera alerta para elegir el método
+    const result = await Swal.fire({
+        title: '¿Cómo prefieres contactarnos?',
+        text: 'Elige el medio que te resulte más cómodo',
+        icon: 'question',
+        showDenyButton: true,
+        confirmButtonText: 'WhatsApp',
+        confirmButtonColor: '#25D366',
+        denyButtonText: 'Email',
+        denyButtonColor: '#EA4335',
+    });
+
+    if (result.isConfirmed) {
+        // Alerta antes de abrir WhatsApp
+        await Swal.fire({
+            title: 'Conectando con WhatsApp',
+            text: 'Te redirigiremos a WhatsApp para enviar tu mensaje',
+            icon: 'info',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: false
+        });
+        window.open(whatsappLink);
+    } else if (result.isDenied) {
+        // Alerta antes de abrir el cliente de email
+        await Swal.fire({
+            title: 'Abriendo tu correo',
+            text: 'Te redirigiremos a tu cliente de email para enviar el mensaje',
+            icon: 'info',
+            timer: 2000,
+            timerProgressBar: true,
+            showConfirmButton: false
+        });
+        window.location.href = mailtoLink;
+    }
+    
+    this.reset();
 });
