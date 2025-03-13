@@ -225,17 +225,19 @@ document.querySelector('.hamburger').addEventListener('click', function() {
     document.body.classList.toggle('menu-open');
 });
 
+
+
+
+
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
     const mensaje = document.getElementById('mensaje').value;
-
-    const mailtoLink = `mailto:construccionespuig@hotmail.com?subject=Nuevo mensaje de ${nombre}&body=Nombre: ${nombre}%0D%0AEmail: ${email}%0D%0AMensaje: ${mensaje}`;
+    
     const whatsappLink = `https://wa.me/5493434194377?text=Nombre: ${encodeURIComponent(nombre)}%0AEmail: ${encodeURIComponent(email)}%0AMensaje: ${encodeURIComponent(mensaje)}`;
 
-    // Primera alerta para elegir el método
     const result = await Swal.fire({
         title: '¿Cómo prefieres contactarnos?',
         text: 'Elige el medio que te resulte más cómodo',
@@ -248,7 +250,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
     });
 
     if (result.isConfirmed) {
-        // Alerta antes de abrir WhatsApp
+        // WhatsApp
         await Swal.fire({
             title: 'Conectando con WhatsApp',
             text: 'Te redirigiremos a WhatsApp para enviar tu mensaje',
@@ -258,18 +260,73 @@ document.getElementById('contactForm').addEventListener('submit', async function
             showConfirmButton: false
         });
         window.open(whatsappLink);
+        this.reset();
     } else if (result.isDenied) {
-        // Alerta antes de abrir el cliente de email
-        await Swal.fire({
-            title: 'Abriendo tu correo',
-            text: 'Te redirigiremos a tu cliente de email para enviar el mensaje',
-            icon: 'info',
-            timer: 2000,
-            timerProgressBar: true,
-            showConfirmButton: false
-        });
-        window.location.href = mailtoLink;
+        // Email a través de FormSubmit
+        try {
+            await Swal.fire({
+                title: 'Enviando mensaje...',
+                text: 'Por favor espera',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+            
+            // Enviar el formulario
+            const formData = new FormData(this);
+            const response = await fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                await Swal.fire({
+                    title: '¡Mensaje enviado!',
+                    text: 'Gracias por contactarnos',
+                    icon: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+                this.reset();
+            } else {
+                throw new Error('Error en el envío');
+            }
+        } catch (error) {
+            await Swal.fire({
+                title: 'Error',
+                text: 'Hubo un problema al enviar el mensaje. Por favor, intenta nuevamente.',
+                icon: 'error'
+            });
+        }
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Add visible class to header immediately
+    document.querySelector('.section-header').classList.add('visible');
     
-    this.reset();
+    // Add visible class to cards with a slight delay
+    const cards = document.querySelectorAll('.process-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, index * 200); // 200ms delay between each card
+    });
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    // Observe all cards and header
+    document.querySelectorAll('.process-card, .section-header').forEach(element => {
+        observer.observe(element);
+    });
 });

@@ -100,47 +100,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Add to script.js
+       
 
-// Function to toggle dark mode
-function toggleDarkMode() {
-    const body = document.body;
-    const icon = document.querySelector('.theme-toggle i');
-    
-    // Toggle dark mode class
-    body.classList.toggle('dark-mode');
-    
-    // Update icon
-    if (body.classList.contains('dark-mode')) {
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-moon');
-      localStorage.setItem('theme', 'light');
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+        const body = document.body;
+        const icon = document.querySelector('.theme-toggle i');
+        
+        // Toggle dark mode class
+        body.classList.toggle('dark-mode');
+        
+        // Update icon
+        if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+        } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+        }
     }
-  }
-  
-  // Function to set initial theme
-  function setInitialTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const icon = document.querySelector('.theme-toggle i');
     
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      icon.classList.remove('fa-moon');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.add('fa-moon');
+    // Function to set initial theme
+    function setInitialTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const icon = document.querySelector('.theme-toggle i');
+        
+        if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        } else {
+        icon.classList.add('fa-moon');
+        }
     }
-  }
-  
-  // Add event listener when DOM is loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    setInitialTheme();
-  });
+    
+    // Add event listener when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        setInitialTheme();
+    });
 
+
+
+//animaciones asesorias//
   document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".asesorias-header");
 
@@ -155,7 +158,7 @@ function toggleDarkMode() {
 
     observer.observe(header);
 });
-
+///animaciones asesoria///
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".asesoria-card");
 

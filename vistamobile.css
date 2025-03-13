@@ -392,6 +392,27 @@ select {
         .asesorias-header h2 {
             font-size: 1.9rem;
         }
+        .asesoria-card h3 {
+            font-size: 1.6rem;
+        }
+        .asesoria-card p {
+            font-size: 1rem;
+        }
+        
+        /*como trabajamos */
+        .section-header h2{
+            font-size: 1.6rem;
+        }
+        .section-header p  {
+            font-size: 1rem;
+            padding: 0 20px;
+        }
+        .process-card h3 {
+            font-size: 1.3rem;
+        }
+        .process-card p {
+            font-size: 1rem;
+        }
 /************ANTECEDENTES****************/
     /*logo*/
     .logosecundario {
