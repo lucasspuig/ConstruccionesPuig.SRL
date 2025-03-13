@@ -173,3 +173,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cards.forEach(card => observer.observe(card));
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const processCards = document.querySelectorAll(".process-card");
+
+    // Configuración del Intersection Observer
+    const observerOptions = {
+        root: null, // Observar el viewport
+        rootMargin: "0px", // Sin margen adicional
+        threshold: 0.9 // La animación se activará cuando el 50% del elemento sea visible
+    };
+
+    // Función que se ejecuta cuando el elemento es visible
+    const handleIntersection = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Cuando el card es visible, le añadimos la clase "visible"
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target); // Deja de observar el card una vez se ha activado
+            }
+        });
+    };
+
+    // Crear el IntersectionObserver
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    // Empezar a observar cada card
+    processCards.forEach(card => {
+        observer.observe(card);
+    });
+});
+

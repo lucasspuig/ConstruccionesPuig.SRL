@@ -245,8 +245,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
         showDenyButton: true,
         confirmButtonText: 'WhatsApp',
         confirmButtonColor: '#25D366',
-        denyButtonText: 'Email',
-        denyButtonColor: '#EA4335',
+
     });
 
     if (result.isConfirmed) {

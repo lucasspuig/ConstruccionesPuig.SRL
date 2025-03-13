@@ -1190,7 +1190,27 @@ h1::after {
             line-height: 1.8;
             font-size: 1.1rem;
         }
-
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .process-card {
+            opacity: 0;
+            transform: translateY(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .process-card.visible {
+            animation: fadeInDown 0.8s ease-out forwards;
+        }
+        
 /* Sección Contacto */
 .containercont {
     max-width: 1200px;
