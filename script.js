@@ -329,3 +329,23 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+
+
+//seccion de que aparezca y desaparezca el menu cuando subo o bajo//
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide nav
+        nav.style.transform = 'translateY(-100%)';
+    } else {
+        // Scrolling up - show nav
+        nav.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollY = currentScrollY;
+});
