@@ -261,7 +261,7 @@ select {
     }
     .nav {
         background: var(--background-light);
-        padding: 8px 16px;
+        padding: 8px 0px;
         position: fixed;
         width: 100%;
         top: 0;
@@ -271,13 +271,13 @@ select {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .imglog {
         width: 110px;
         height: 106px;
-        margin-left: -64%;
+        
         /* margin-left: 1%; */
     }
     
