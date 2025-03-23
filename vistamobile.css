@@ -231,29 +231,53 @@ select {
 
 @media (min-width:375px) and (max-width:424px) {
 
-    .nav-links {
-        padding-bottom: 10%;
-        top: 16.4%;
+    .nav {
+        padding: 8px 0px;
     }
-    .container1 {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 300px;
-        margin-left: -20%;
+    .nav__link {
+        padding: 120px 20px;
+        gap: 5em;
     }
-    nav {
+    .nav__img {
+        display: block;
+        width: 45px;
+    }
+    .nav__links {
+        font-size: 20px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3sease;
+    }
+    .nav__link--show {
+        right: 0px;
+    }
+    .nav__close {
+        cursor: pointer;
+        width: 34px;
+        position: absolute;
+        top: 38px;
+        right: 62px;
+    }
+    .nav {
         background: var(--background-light);
-        padding: 3px 0;
+        padding: 8px 16px;
         position: fixed;
         width: 100%;
         top: 0;
         z-index: 1000;
-        transition: all 0.3s ease;
-        box-shadow: 0 1px 20px;
+        transition: all 0.3sease;
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
     }
+
     .imglog {
         width: 110px;
         height: 106px;
+        margin-left: -64%;
         /* margin-left: 1%; */
     }
     
@@ -400,10 +424,10 @@ select {
         }
         
         /*como trabajamos */
-        .section-header h2{
+        .section-header1 h2{
             font-size: 1.6rem;
         }
-        .section-header p  {
+        .section-header1 p  {
             font-size: 1rem;
             padding: 0 20px;
         }

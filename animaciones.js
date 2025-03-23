@@ -175,33 +175,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const processCards = document.querySelectorAll(".process-card");
 
-    // Configuración del Intersection Observer
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".section-header1");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.add("visible");
+                observer.unobserve(header); // Deja de observar una vez activado
+            }
+        });
+    }, { threshold: 0.9 });
+
+    observer.observe(header);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeInElements = document.querySelectorAll(".section-title, .section-subtitle, .process-card"); // Incluye los cards también
+
     const observerOptions = {
-        root: null, // Observar el viewport
-        rootMargin: "0px", // Sin margen adicional
-        threshold: 0.9 // La animación se activará cuando el 50% del elemento sea visible
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9
     };
 
-    // Función que se ejecuta cuando el elemento es visible
     const handleIntersection = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Cuando el card es visible, le añadimos la clase "visible"
                 entry.target.classList.add("visible");
-                observer.unobserve(entry.target); // Deja de observar el card una vez se ha activado
+                observer.unobserve(entry.target); // Deja de observar una vez que se activa
             }
         });
     };
 
-    // Crear el IntersectionObserver
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    // Empezar a observar cada card
-    processCards.forEach(card => {
-        observer.observe(card);
+    fadeInElements.forEach(element => {
+        observer.observe(element);
     });
 });
 

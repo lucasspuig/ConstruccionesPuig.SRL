@@ -17,33 +17,35 @@
 <body>
     <img src="assest/fondohero.avif" class="background-image" alt="Fondo Hero">
 
-    <!-- Navegación -->
-    <nav>
 
-        <div>
+    <!-- Navegación -->
+    <nav class="nav">
+        <div class="nav__logo">
             <img src="./assest/isologo-removebg-preview (1).png" alt="" class="imglog">
         </div>
 
-        <div class="container1">
-            <div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#Asesorias">Asesorias</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
+        <div class="nav__menu">
+            <img src="./assest/menu.svg" class="nav__img" alt="menu">
         </div>
-        <button class="theme-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i>
-        </button>
+
+        <ul class="nav__link nav__link--menu">
+            <li class="nav__items"><a href="#inicio" class="nav__links">Inicio</a></li>
+            <li class="nav__items dropdown">
+                <a href="#" class="nav__links dropdown__trigger">Acerca de <span class="dropdown__arrow">▼</span></a>
+                <div class="dropdown__content">
+                    <a href="#servicios">Servicios</a>
+                    <a href="#nosotros">Nosotros</a>
+                    <a href="#Asesorias">Asesorias</a>
+                </div>
+            </li>
+            <li class="nav__items"><a href="#contacto" class="nav__links">Contacto</a></li>
+            <li class="nav__items"><a href="#blog" class="nav__links">Blog</a></li>
+            <img src="./assest/close.svg" class="nav__close" alt="close">
+        </ul>
+
+        
     </nav>
+
 
     <!-- Sección Hero -->
     <section class="hero" id="inicio">
@@ -300,7 +302,7 @@
     <!-- Sección como trabajamos -->
     <section class="como-trabajamos">
         <div class="container12">
-            <div class="section-header">
+            <div class="section-header1">
                 <h2>Cómo Trabajamos</h2>
                 <p>Sigue nuestro proceso paso a paso y convierte tu sueño en realidad. Desde la planificación hasta la construcción, te acompañamos en cada detalle para brindarte un hogar seguro, moderno y hecho a tu medida.</p>
             </div>
