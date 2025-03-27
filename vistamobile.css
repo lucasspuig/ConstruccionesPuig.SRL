@@ -237,6 +237,7 @@ select {
     .nav__link {
         padding: 120px 20px;
         gap: 5em;
+        margin-right: 0%;
     }
     .nav__img {
         display: block;
