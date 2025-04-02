@@ -80,6 +80,31 @@ function animateNumbers(element) {
     
     requestAnimationFrame(updateNumber);
 }
+//color en el nav cuando el usuario hace scroll hacia arriba
+        document.addEventListener("DOMContentLoaded", function () {
+            let lastScrollY = window.scrollY;
+            const nav = document.querySelector(".nav");
+
+            window.addEventListener("scroll", () => {
+                const currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY) {
+                    // Si el usuario baja, ocultamos la barra de navegación
+                    nav.classList.add("nav--hidden");
+                } else {
+                    // Si el usuario sube, mostramos la barra y agregamos el fondo oscuro
+                    nav.classList.remove("nav--hidden");
+                    nav.classList.add("nav--scrolled");
+                }
+
+                // Si está en la parte superior, quitamos el fondo oscuro
+                if (currentScrollY === 0) {
+                    nav.classList.remove("nav--scrolled");
+                }
+
+                lastScrollY = currentScrollY;
+            });
+        });
 
 
 
@@ -330,22 +355,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-//seccion de que aparezca y desaparezca el menu cuando subo o bajo//
-
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    const currentScrollY = window.scrollY;
-    
-    if (currentScrollY > lastScrollY) {
-        // Scrolling down - hide nav
-        nav.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up - show nav
-        nav.style.transform = 'translateY(0)';
-    }
-    
-    lastScrollY = currentScrollY;
-});
