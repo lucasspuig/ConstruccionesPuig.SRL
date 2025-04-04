@@ -275,6 +275,7 @@ select {
         transition: color 0.3sease;
     }
     .nav__link--show {
+        background-color: black;
         right: 0px;
     }
     .nav__close {

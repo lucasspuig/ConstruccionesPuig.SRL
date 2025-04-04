@@ -702,12 +702,111 @@ body {
     background-color: #2f2f2f;
     
 }
-h1{
-font-size: 65px;
-color: white;
-font-family: Phudu, sans-serif;
 
+h1 {
+  font-size: 65px;
+  color: white;
+  font-family: "Phudu", sans-serif;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplicar un ligero movimiento ondulado a cada letra */
+h1 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: waveLetters 1s ease-out forwards;
+}
+
+/* Animación de onda sutil */
+@keyframes waveLetters {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Retraso progresivo para cada letra */
+h1 span:nth-child(1) { animation-delay: 0s; }
+h1 span:nth-child(2) { animation-delay: 0.05s; }
+h1 span:nth-child(3) { animation-delay: 0.1s; }
+h1 span:nth-child(4) { animation-delay: 0.15s; }
+h1 span:nth-child(5) { animation-delay: 0.2s; }
+/* Repetir para el resto de las letras */
+
+.subtip {
+  font-size: 20px;
+  color: white;
+  font-family: "Phudu", sans-serif;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out forwards;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Aplicar un ligero movimiento ondulado a cada palabra */
+.subtip span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: waveWords 1s ease-out forwards;
+}
+
+/* Animación de onda sutil */
+@keyframes waveWords {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Retraso progresivo para cada palabra */
+.subtip span:nth-child(1) { animation-delay: 0s; }
+.subtip span:nth-child(2) { animation-delay: 0.1s; }
+.subtip span:nth-child(3) { animation-delay: 0.2s; }
+.subtip span:nth-child(4) { animation-delay: 0.3s; }
+.subtip span:nth-child(5) { animation-delay: 0.4s; }
+.subtip span:nth-child(6) { animation-delay: 0.5s; }
+
+
+
+
 .hero-servicio {
     
     
@@ -747,6 +846,7 @@ font-family: Phudu, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+    
 }
 
 .ubicacion-serv-2{
@@ -758,6 +858,7 @@ font-family: Phudu, sans-serif;
     margin: 0 auto;
     padding: 2rem 0;
     flex-direction: row-reverse;
+    
 
 }
 
@@ -778,8 +879,10 @@ font-family: Phudu, sans-serif;
 }
 
 .subti-de-servicio {
+  font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     color: #ffffff;
+    
 }
 
 .imagenes-de-servicios {
@@ -793,11 +896,21 @@ font-family: Phudu, sans-serif;
     border-radius: 2%;
     box-shadow: 2px 5px 5px #000000;
 }
+.imagenen-serv1 img{
+  border-radius: 2%;
+  box-shadow: 2px 5px 5px #000000;
+}
 .imagenen-serv {
     width: 100%;
     height: auto;
     border-radius: 0px;
     object-fit: cover;
+}
+.imagenen-serv1 {
+  width: 100%;
+  height: 226px;
+  border-radius: 0px;
+  object-fit: cover;
 }
 .icono-serv{
     filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.4));
@@ -857,18 +970,19 @@ font-family: Phudu, sans-serif;
     gap: 8px;
     font-size: 0.9rem;
 }
-
+  /* fotter iconos */
 .social-icons a {
     color: var(--white);
     margin-left: 15px;
     text-decoration: none;
     transition: transform 0.3s ease;
+    width: 20px;
 }
 
 .social-icons a:hover {
     color: var(--primary-color);
     transform: translateY(-2px);
-}
+  }
 /*nav2*/
 /* Nav */
 /* Estilos generales del navbar */
@@ -1046,27 +1160,58 @@ font-family: Phudu, sans-serif;
 }
 
 .ver-mas-btn {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #ffffff;
-    background: linear-gradient(90deg, #DF6706, #F4AF71);
-    border: none;
-    border-radius: 50px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 1%;
-    
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(90deg, #DF6706, #F4AF71);
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 1%;
+  text-decoration: none;
+
+  /* Animación inicial (aparecer con desvanecimiento y elevación) */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInButton 0.9s ease-out forwards 0.5s;
+}
+
+/* Animación de aparición */
+@keyframes fadeInButton {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Pequeño rebote después de la aparición */
+.ver-mas-btn.animated {
+  animation: bounceButton 0.6s ease-out;
+}
+
+@keyframes bounceButton {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Efecto al pasar el mouse */
+.ver-mas-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .ver-mas-btn.visible {
@@ -1178,7 +1323,7 @@ font-family: Phudu, sans-serif;
   width: 50px;
   height: 2px;
   background: var(--primary-color);
-  margin-left: 125px;
+  margin-left: 164px;
   padding: 0;
   }
 
@@ -1210,13 +1355,10 @@ font-family: Phudu, sans-serif;
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .social-icons a{
-  opacity: 1;
+  margin-left: 2%;
+  width: 10px;
 }
-a:-webkit-any-link {
-  cursor: auto;
-  cursor: 0;
-  text-decoration: none;
-}
+
 
 /* Animaciones */
 @keyframes fadeInUp {
