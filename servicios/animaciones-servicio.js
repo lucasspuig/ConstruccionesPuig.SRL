@@ -16,3 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
  
 
+
+//servicios
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".servicios-impar");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
