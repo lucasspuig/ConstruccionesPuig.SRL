@@ -265,7 +265,7 @@ select {
     }
     .nav__img {
         display: block;
-        width: 45px;
+        width: 53px;
     }
     .nav__links {
         font-size: 20px;
@@ -286,7 +286,7 @@ select {
         right: 62px;
     }
     .nav__logo img {
-        max-height: 95px;
+        max-height: 111px;
         margin-top: 0%;
         width: auto;
     }
