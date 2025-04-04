@@ -445,6 +445,11 @@ select {
             }
             
         }
+        .social-icons a{
+            font-size: 23px;
+           
+          }
+          
         .theme-toggle {
             position: absolute;
             top: 44px;

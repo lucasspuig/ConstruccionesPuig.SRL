@@ -2204,6 +2204,10 @@ h1::after {
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
+.social-icons a{
+    font-size: 23px;
+   
+  }
 
 /* Animaciones */
 @keyframes fadeInUp {

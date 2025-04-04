@@ -962,12 +962,14 @@ h1 span:nth-child(5) { animation-delay: 0.2s; }
       opacity: 1;
   }
 }
-
+.servicios-impar {
+  will-change: opacity, transform;
+}
 /* Aplicar animaciones */
 .servicios-impar {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
 .servicios-impar.visible {
@@ -1455,6 +1457,7 @@ h1 span:nth-child(5) { animation-delay: 0.2s; }
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 .social-icons a{
+  font-size: 23px;
   margin-left: 2%;
   width: 10px;
 }
