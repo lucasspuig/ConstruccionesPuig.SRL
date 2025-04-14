@@ -1,8 +1,76 @@
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLetter {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-letter {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLetter 0.5s ease forwards;
+}
+
+.fade-in-subtitle {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.titulos h1 span {
+    display: inline-block;
+    margin-right: 0.1em;
+}
+
+.subtip span {
+    display: inline-block;
+    margin-right: 0.2em;
+}
+
+/* Animaciones de imágenes */
+.image-hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación del título */
+.titulos h1 {
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.titulos p {
+    animation: fadeInUp 0.5s forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
     .nav__link {
         position: fixed;
-        
         top: 0;
         right: -100%;
         width: 100%;
@@ -13,6 +81,9 @@
         align-items: center;
         gap: 2em;
         transition: right 0.3s ease;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
     }
 
     .nav__link--show {
@@ -21,10 +92,26 @@
 
     .nav__menu {
         display: block;
+        cursor: pointer;
+        z-index: 1001;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__menu:hover {
+        transform: scale(1.1);
     }
 
     .nav__close {
         display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .nav__close:hover {
+        transform: rotate(90deg);
     }
 
     .dropdown__content {
@@ -33,6 +120,20 @@
         width: 100%;
         text-align: center;
         display: none;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    .dropdown__content a {
+        padding: 12px 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown__content a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     .dropdown:hover .dropdown__content {
@@ -53,28 +154,102 @@
     }
 }
 @media (max-width: 768px) {
-    .nav-links {
-        display: flex;
-        gap: 0px;
-        list-style: none;
-    
+    /* Hero section */
+    .hero-servicio {
+        min-height: 60vh;
+        padding: 100px 20px 40px;
     }
-    /* Estilos generales del navbar */
-    .nav {
-        padding: 0px 16px;
-        position: fixed;
+
+    .titulos h1 {
+        font-size: 2rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
+    .subtip {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Servicios section */
+    .servicios-impar {
+        padding: 40px 20px;
+    }
+
+    .ubicacion-serv, .ubicacion-serv-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .ubicacion-serv-2 {
+        direction: ltr;
+    }
+
+    .letras-principal {
+        order: 1;
+    }
+
+    .imagenes-de-servicios {
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .imagenen-serv, .imagenen-serv1 {
         width: 100%;
-        top: 0;
-        z-index: 1000;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        
-        background-color: transparent; /* Inicialmente transparente */
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
     }
+
+    .titulo-serv {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .subtitulo-serv {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .iconos-de-servicios {
+        margin-bottom: 1rem;
+    }
+
+    .icono-serv {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+}
+
+/* Estilos generales del navbar */
+.nav {
+    padding: 0px 16px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; /* Inicialmente transparente */
+}
     
     /* Fondo oscuro cuando el usuario sube */
     .nav--scrolled {
