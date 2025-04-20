@@ -234,7 +234,7 @@
         gap: 2rem;
     }
 }
-}
+
 
 /* Estilos generales del navbar */
 .nav {
@@ -253,7 +253,7 @@
     
     /* Fondo oscuro cuando el usuario sube */
     .nav--scrolled {
-        background-color: rgba(20, 20, 20, 0.592)
+        background-color: rgba(20, 20, 20, 0.3)
     }
     
     /* Ocultar navbar cuando el usuario baja */
@@ -281,7 +281,7 @@
     .hero-subtitle {
         font-size: 1.2rem;
     }
-}
+
     /* Hamburger Menu */
     .hamburger {
         display: none;
@@ -329,7 +329,7 @@
         
         /* Fondo oscuro cuando el usuario sube */
         .nav--scrolled {
-            background-color: rgba(20, 20, 20, 0.592)
+            background-color: rgba(20, 20, 20, 0.3)
         }
         
         /* Ocultar navbar cuando el usuario baja */
@@ -487,7 +487,7 @@
     }
 
 
-@media (min-width:375px) and (max-width:424px){
+@media (min-width:374px) and (max-width:424px){
     .nav__menu {
         display: block;
         width: 70px;
@@ -548,7 +548,7 @@
     
     /* Fondo oscuro cuando el usuario sube */
     .nav--scrolled {
-        background-color: rgba(20, 20, 20, 0.592)
+        background-color: rgba(20, 20, 20, 0.3)
     }
     
     /* Ocultar navbar cuando el usuario baja */
@@ -588,7 +588,15 @@
             margin-top: -1%;
         }
 
-
+        .titulos h1 {
+            font-size: 1.7rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            text-align: center;
+            padding: 0 1rem;
+            word-wrap: break-word;
+            white-space: normal;
+        }
     h1 {
         font-size: 19px;
         color: white;
@@ -600,13 +608,51 @@
         animation: fadeIn 1.5sease-out forwards;
     }
     .subtip {
-        font-size: 14px;
+        font-size: 12px;
         color: white;
         font-family: "Phudu", sans-serif;
         display: inline-block;
         overflow: hidden;
         opacity: 0;
-        animation: fadeInText 1.5sease-out forwards;
+        animation: fadeInText 1.5sease -out forwards;
+    }
+
+    /* seccion de servicios */
+    .ubicacion-serv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 6px;
+    }
+    .servicios-impar {
+        padding: 20px 0px;
+    }
+    .titulo-serv {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 0 0rem;
+    }
+    
+    .subtitulo-serv {
+        font-size: 1.1rem;
+        /* line-height: 1.6; */
+        text-align: center;
+        max-width: 700px;
+    }
+    .letras-principal {
+        width: 90%;
+        order: 1;
+    }
+    .imagenes-de-servicios {
+        width: 95%;
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     /* fotter */
     .footer-section h3::after {

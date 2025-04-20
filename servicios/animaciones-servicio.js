@@ -1,4 +1,21 @@
+// Función para cargar CSS dinámicamente
+function loadCSS(href) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+    // Cargar los archivos CSS necesarios
+    loadCSS('./vistamobile.css');
+    loadCSS('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+    loadCSS('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    loadCSS('https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css');
+    
+    // Marcar el body como cargado
+    document.body.classList.add('loaded');
+
     // Animación del título principal con retraso inicial
     const titleSpans = document.querySelectorAll('.titulos h1 span');
     titleSpans.forEach((span, index) => {

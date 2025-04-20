@@ -25,17 +25,59 @@
     <meta property="twitter:image" content="./assest/isologo.png">
 
     <title>Puig Construcciones SRL - Expertos en Construcción | Entre Ríos</title>
-    <link rel="shortcut icon" href="./assest/isologo.png"  type="image/x-icon">
+    <link rel="shortcut icon" href="./assest/isologo.png" type="image/x-icon">
+
+    <!-- Precargas y conexiones -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="vistamobile.css">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- Estilos externos con carga optimizada -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" media="print" onload="this.media='all'">
+    
+    <!-- Fallback para navegadores sin JavaScript -->
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     </noscript>
+    <!-- Scripts de optimización -->
+    <script>
+        // Función para optimizar la carga de imágenes
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lazy loading para todas las imágenes
+            const images = document.querySelectorAll('img[data-src]');
+            const imageOptions = {
+                threshold: 0.1,
+                rootMargin: '50px 0px'
+            };
+
+            function preloadImage(img) {
+                const src = img.getAttribute('data-src');
+                if (!src) return;
+                img.src = src;
+                img.removeAttribute('data-src');
+            }
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        preloadImage(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, imageOptions);
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+    </script>
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9816841569556884" crossorigin="anonymous"></script>
     <style>
@@ -54,8 +96,17 @@
             }
         }
     </style>
+    <!-- Precargar imágenes críticas -->
+    <link rel="preload" as="image" href="./assest/isologo.png">
+    <link rel="preload" as="image" href="./assest/fondohero.avif">
 </head>
-<body>
+<body class="preload">
+    <script>
+        // Remover clase preload después de que todo cargue
+        window.addEventListener('load', function() {
+            document.body.classList.remove('preload');
+        });
+    </script>
     <div class="background-image"></div>
 
 
@@ -141,16 +192,16 @@
             <div class="project-card1">
                 <div class="carousel-container">
                 <div class="carousel-images">
-                    <img src="./assest/fachadaprincipalsanluis.jfif" alt="Edificio Residencial 1" loading="lazy">
-                    <img src="./assest/sanluis sin nada.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/fachadaviejasanluis.jfif" alt="Edificio Residencial 2" loading="lazy">
-                    <img src="./assest/sanluisinteriorescaleras.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/escalerasterminadassanluis.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/iniciodeescalesrassanluis.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/sanluisinterior.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/sanluisfotopatio.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/bañosanluiss.jfif" alt="Edificio Residencial 3" loading="lazy">
-                    <img src="./assest/cocinasanluis.jfif" alt="Edificio Residencial 3" loading="lazy">
+                    <img data-src="./assest/fachadaprincipalsanluis.jfif" alt="Edificio Residencial 1" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/sanluis sin nada.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/fachadaviejasanluis.jfif" alt="Edificio Residencial 2" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/sanluisinteriorescaleras.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/escalerasterminadassanluis.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/iniciodeescalesrassanluis.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/sanluisinterior.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/sanluisfotopatio.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/bañosanluiss.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/cocinasanluis.jfif" alt="Edificio Residencial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                     
                 </div>
                 <div class="carousel-indicators"></div>
@@ -175,12 +226,12 @@
             <div class="project-card1">
                 <div class="carousel-container">
                 <div class="carousel-images">
-                    <img src="./assest/facadasprincipalpoderjudicial.jfif" alt="Centro Comercial 1" loading="lazy">
-                    <img src="./assest/fachadapoderjudicial.jfif" alt="Centro Comercial 2" loading="lazy">
-                    <img src="./assest/fachada3poderjudicial.jfif" alt="Centro Comercial 2" loading="lazy">
-                    <img src="./assest/poderjudicial.jfif" alt="Centro Comercial 3" loading="lazy">
-                    <img src="./assest/fachadasinterminar.jfif" alt="Centro Comercial 3" loading="lazy">
-                    <img src="./assest/poderjudicial2.jfif" alt="Centro Comercial 3" loading="lazy">
+                    <img data-src="./assest/facadasprincipalpoderjudicial.jfif" alt="Centro Comercial 1" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/fachadapoderjudicial.jfif" alt="Centro Comercial 2" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/fachada3poderjudicial.jfif" alt="Centro Comercial 2" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/poderjudicial.jfif" alt="Centro Comercial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/fachadasinterminar.jfif" alt="Centro Comercial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+                    <img data-src="./assest/poderjudicial2.jfif" alt="Centro Comercial 3" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
                 </div>
                 <div class="carousel-indicators"></div>
                 </div>
