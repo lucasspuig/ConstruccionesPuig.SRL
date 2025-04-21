@@ -286,7 +286,8 @@ select {
         right: 62px;
     }
     .nav__logo img {
-        max-height: 111px;
+        max-height: 100px;
+        margin-left: -3%;
         margin-top: 0%;
         width: auto;
     }
@@ -331,7 +332,7 @@ select {
     
     /*logo principal*/
     .logo-container img {
-        width: 95%;
+        width: 100%;
         
     }
     .hero {
@@ -447,9 +448,7 @@ select {
         }
         .social-icons a{
             font-size: 23px;
-           
-          }
-          
+        }
         .theme-toggle {
             position: absolute;
             top: 44px;
