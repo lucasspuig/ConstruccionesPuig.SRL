@@ -2,17 +2,39 @@
 
 
 @media (min-width:425px) and (max-width:635px){
-    
-    .nav-links {
-        
-        top: 18.9%;
+    .nav {
+        padding: 8px 0px;
+    }
+    .nav__link {
+        padding: 120px 20px;
+        gap: 7em;
+        margin-right: 0%;
     }
     .nav__img {
         display: block;
-        width: 55px;
+        width: 53px;
+    }
+    .nav__links {
+        font-size: 20px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3sease;
+    }
+    .nav__link--show {
+        background-color: black;
+        right: 0px;
+    }
+    .nav__close {
+        cursor: pointer;
+        width: 34px;
+        position: absolute;
+        top: 38px;
+        right: 62px;
     }
     .nav__logo img {
-        max-height: 109px;
+        max-height: 100px;
+        margin-left: -3%;
         margin-top: 0%;
         width: auto;
     }
@@ -260,7 +282,7 @@ select {
     }
     .nav__link {
         padding: 120px 20px;
-        gap: 5em;
+        gap: 6em;
         margin-right: 0%;
     }
     .nav__img {
