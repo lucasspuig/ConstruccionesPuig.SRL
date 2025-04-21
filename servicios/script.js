@@ -63,3 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+const dropdownTriggers = document.querySelectorAll('.dropdown__trigger');
+
+dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener('click', e => {
+        e.preventDefault();
+        const parent = trigger.closest('.dropdown');
+        parent.classList.toggle('active');
+    });
+});
