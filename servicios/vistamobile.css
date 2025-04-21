@@ -486,8 +486,1685 @@
         }
     }
 
+    /* telefono grande   */
 
-@media (min-width:374px) and (max-width:424px){
+
+    @media (min-width:667px) and (max-width:708px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 3.2rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 46%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+    @media (min-width:624px) and (max-width:667px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 3rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 46%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+    @media (min-width:582px) and (max-width:624px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 2.8rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 46%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+    @media (min-width:539px) and (max-width:582px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 2.6rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 45%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+    
+    @media (min-width:497px) and (max-width:539px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 2.4rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 45%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+
+    }
+
+    /* telefono medio */
+
+
+    @media (min-width:455px) and (max-width:497px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 2.2rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 43%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+    @media (min-width:412px) and (max-width:455px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 2rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 43%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+
+    
+    @media (min-width:391px) and (max-width:412px){
+        .nav__menu {
+            display: block;
+            width: 70px;
+        }
+        .nav {
+            padding: 8px 0px;
+        }
+        .nav__link {
+            top: -18px;
+            padding: 119px 0px;
+            gap: 5em;
+            margin-right: 0%;
+            /* width: 100%; */
+        }
+        .nav__img {
+            display: block;
+            width: 53px;
+        }
+        .nav__links {
+            font-size: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3sease;
+        }
+        .nav__link--show {
+            background-color: black;
+            right: 0px;
+        }
+        .nav__close {
+            cursor: pointer;
+            width: 34px;
+            position: absolute;
+            top: 38px;
+            right: 62px;
+        }
+        .nav__logo img {
+            max-height: 111px;
+            margin-top: 0%;
+            width: auto;
+        }
+        /* Estilos generales del navbar */
+        .nav {
+            padding: 0px 0px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            
+            background-color: transparent; /* Inicialmente transparente */
+        }
+        
+        /* Fondo oscuro cuando el usuario sube */
+        .nav--scrolled {
+            background-color: rgba(20, 20, 20, 0.3)
+        }
+        
+        /* Ocultar navbar cuando el usuario baja */
+        .nav--hidden {
+            transform: translateY(-100%);
+        }
+        .imglog {
+            width: 110px;
+            height: 106px;
+            
+            /* margin-left: 1%; */
+        }
+        
+        .hero-servicio {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex
+        ;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0rem;
+            margin: 0;
+            width: 100vw;
+            background-image: linear-gradient(180deg, #000000b5 10%, #0000008a 90%), url(../assest/fondohero-ser.webp);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+            /* boton nav */
+            .ver-mas-btn {
+    
+                padding: 9px 25px;
+                font-size: 18px;
+            }
+            .ver-mas-btn .arrow{
+                margin-top: -1%;
+            }
+    
+            .titulos h1 {
+                font-size: 1.8rem;
+                line-height: 1.4;
+                margin-bottom: 1rem;
+                text-align: center;
+                padding: 0 1rem;
+                word-wrap: break-word;
+                white-space: normal;
+            }
+        h1 {
+            font-size: 19px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: fadeIn 1.5sease-out forwards;
+        }
+        .subtip {
+            font-size: 12px;
+            color: white;
+            font-family: "Phudu", sans-serif;
+            display: inline-block;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInText 1.5sease -out forwards;
+        }
+    
+        /* seccion de servicios */
+        .ubicacion-serv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 6px;
+        }
+        .servicios-impar {
+            padding: 20px 0px;
+        }
+        .titulo-serv {
+            font-size: 1.6rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0 0rem;
+        }
+        
+        .subtitulo-serv {
+            font-size: 1.1rem;
+            /* line-height: 1.6; */
+            text-align: center;
+            max-width: 700px;
+        }
+        .letras-principal {
+            width: 90%;
+            order: 1;
+        }
+        .imagenes-de-servicios {
+            width: 95%;
+            order: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        /* fotter */
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 41%;
+            width: 51px;
+            height: 3px;
+            background: var(--primary-color);
+            margin-left: 0px;
+        }
+        .footer-section ul a {
+            font-size: 15px;
+        }
+        .footer-section p{
+            font-size: 16px;
+        }
+        .footer-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .copyfot{
+            font-size: 10px;
+        }
+        .diseñofot{
+            a {
+                color: inherit; /* Hereda el color del texto padre */
+                text-decoration: none; /* Quita el subrayado */
+                font-size: 10px;
+                color: var(--primary-color);
+            }
+            
+        }
+        .social-icons a {
+            font-size: 20px;
+            margin-left: 2%;
+            
+        }
+    }
+
+    /* telefono chico */
+
+@media (min-width:374px) and (max-width:391px){
     .nav__menu {
         display: block;
         width: 70px;
