@@ -72,3 +72,5 @@ dropdownTriggers.forEach(trigger => {
         parent.classList.toggle('active');
     });
 });
+
+

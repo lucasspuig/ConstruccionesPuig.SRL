@@ -831,7 +831,7 @@ body {
         position: absolute;
         
         min-width: 160px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 26px rgba(156, 156, 156, 0.278);
         z-index: 1;
         border-radius: 4px;
         padding: 8px 0;
@@ -886,6 +886,7 @@ body {
         }
     
         .dropdown__content {
+            background: #24242499;
             position: static;
             box-shadow: none;
             width: 100%;
