@@ -224,6 +224,14 @@ document.querySelectorAll('.project-card1').forEach(card => {
     // Event Listeners
     hamburger.addEventListener('click', toggleMenu);
 
+    // Cerrar menú cuando se hace clic en cualquier enlace del menú desplegable
+    document.querySelectorAll('.dropdown__content a').forEach(link => {
+        link.addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav__link');
+            navLinks.classList.remove('active');
+        });
+    });
+
     // Close menu when clicking a link
     links.forEach(link => {
     link.addEventListener('click', () => {
@@ -354,4 +362,3 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
-
