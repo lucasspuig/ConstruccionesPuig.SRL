@@ -6,8 +6,8 @@
         padding: 8px 0px;
     }
     .nav__link {
-        padding: 120px 20px;
-        gap: 7em;
+        padding: 120px 20px 64rem;
+        gap: 6em;
         margin-right: 0%;
     }
     .nav__img {
@@ -281,7 +281,7 @@ select {
         padding: 8px 0px;
     }
     .nav__link {
-        padding: 120px 20px;
+        padding: 120px 20px 64rem;
         gap: 6em;
         margin-right: 0%;
     }
